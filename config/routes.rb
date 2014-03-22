@@ -1,4 +1,5 @@
 MyCUplanner::Application.routes.draw do
+  resources :users
   get "users/new"
   match '/signup',  to: 'users#new', via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
