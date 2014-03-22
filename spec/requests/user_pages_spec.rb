@@ -1,5 +1,7 @@
 require 'spec_helper'
 
+# run with $ bundle $ bundle exec rspec spec/
+
 describe "User pages" do
 
   subject { page }
