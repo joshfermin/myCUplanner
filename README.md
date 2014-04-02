@@ -13,13 +13,13 @@ A web application that will be deployed to heroku to help computer science stude
 ------
 * Models: 
 
-	User Model:
+	1. User Model:
 		* Name
 		* Email
 		* Password-hash
 		* Courses Previously Taken
 
-	Course Model:
+	2. Course Model:
 		* Course Number
 		* Course Title
 		* Instructor
@@ -28,21 +28,21 @@ A web application that will be deployed to heroku to help computer science stude
 
 
 * Views:
-	Log In View:
+	1. Log In View:
 		* Simple log-in view
 
-	Sign Up View:
+	2. Sign Up View:
 		* Will allow users to sign up with their previous courses
 
-	Class Diagram View:
+	3. Class Diagram View:
 		* A view that will show users a diagram of what they have completed and what they need to take
 
-	User Home Page: Will include two partials:
+	4. User Home Page: Will include two partials:
 		* Schedule View
 		* Calendar Edit View
 
 * Controllers:
-	User controller
-	Class/calendar controller
+	1. User controller
+	2. Class/calendar controller
 
 
