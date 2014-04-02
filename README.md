@@ -8,6 +8,8 @@ Project for Software Methods Engineering and Tools course, Spring 2014.
 
 A web application that will be deployed to heroku to help computer science students at CU Boulder schedule their upcoming courses.
 
+Is currently deployed at https://mycuplanner.herokuapp.com/
+
 ### MVC:
 ------
 * Models: 
