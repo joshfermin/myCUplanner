@@ -6,3 +6,5 @@ A web application that will be deployed to heroku to help computer science stude
 
 
 <tt>rake doc:app</tt>.
+
+Bip bips
