@@ -1,4 +1,4 @@
-# README ## myCUplanner
+# README: myCUplanner
 ======
 
 ### Project Info:
@@ -13,13 +13,13 @@ A web application that will be deployed to heroku to help computer science stude
 ------
 * Models: 
 
-... User Model:
+...User Model:
 ..* Name
 ..* Email
 ..* Password-hash
 ..* Courses Previously Taken
 
-... Course Model:
+...Course Model:
 ..* Course Number
 ..* Course Title
 ..* Instructor
@@ -28,21 +28,21 @@ A web application that will be deployed to heroku to help computer science stude
 
 
 * Views:
-... Log In View:
+...Log In View:
 ..* Simple log-in view
 
-... Sign Up View:
+...Sign Up View:
 ..* Will allow users to sign up with their previous courses
 
-... Class Diagram View:
+...Class Diagram View:
 ..* A view that will show users a diagram of what they have completed and what they need to take
 
-... User Home Page: Will include two partials:
+...User Home Page: Will include two partials:
 ..* Schedule View
 ..* Calendar Edit View
 
 * Controllers:
-... User controller
-... Class/calendar controller
+...User controller
+...Class/calendar controller
 
 
