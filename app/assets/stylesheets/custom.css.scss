@@ -173,3 +173,8 @@ aside {
   @extend .control-group;
   @extend .error;
 }
+
+
+center .hero-unit {
+  background-image: url(flatirons.jpg);
+}
