@@ -1,13 +1,13 @@
 class UsersController < ApplicationController
   def new
-    @user = User.new
+    @user = User.new # creates a User instance with null attr
   end
 
   def create
     @user = User.new(user_params)
     if @user.save
       sign_in @user
-      flash[:success] = "Welcome to myCUplanner"
+      flash[:success] = "Welcome to myCUplanner" # flash notice that tells the user that the sign up was successful
       redirect_to @user
     else
       render 'new'
