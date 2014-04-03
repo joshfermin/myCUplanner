@@ -2,7 +2,7 @@
 
 ### Project Info:
 ------
-Authors: Josh Fermin and Louis Bouddhou
+Authors: Josh Fermin and Louis Bouddhou and Bugs Bunny
 
 Project for Software Methods Engineering and Tools course, Spring 2014.
 
