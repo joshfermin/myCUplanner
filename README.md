@@ -2,7 +2,7 @@
 
 ### Project Info:
 ------
-Authors: Josh Fermin and Louis Bouddhou and Daffy Duck
+Authors: Josh Fermin and Louis Bouddhou and Goku
 
 Project for Software Methods Engineering and Tools course, Spring 2014.
 
