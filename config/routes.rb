@@ -1,14 +1,15 @@
 MyCUplanner::Application.routes.draw do
   # static pages routes
-  root :to => 'static_pages#home'
-  match '/about',   to: 'static_pages#about',   via: 'get'
-  match '/contact', to: 'static_pages#contact', via: 'get'
+  root :to => 'dynamic_pages#home'
+  match '/about',   to: 'dynamic_pages#about',   via: 'get'
+  match '/contact', to: 'dynamic_pages#contact', via: 'get'
 
 
   # users routes
   resources :users
   get "users/new"
   match '/signup',  to: 'users#new', via: 'get'
+  match '/home', to: 'users#home', via: 'get'
 
   # sign in / sign out routes
   resources :sessions, only: [:new, :create, :destroy]

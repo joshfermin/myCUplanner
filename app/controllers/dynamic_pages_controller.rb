@@ -1,0 +1,3 @@
+class DynamicPagesController < ApplicationController
+
+end
