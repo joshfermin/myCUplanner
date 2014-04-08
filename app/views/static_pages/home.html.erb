@@ -1,5 +1,9 @@
 <div class="center hero-unit">
-  <h1>Welcome to myCUplanner</h1>
+  <% if signed_in? %>
 
-  <p> Don't have an account? <%= link_to "Sign up now!", signup_path, class: "btn btn-xs btn-default" %> </p>
+  <% else %>
+      <h1>Welcome to myCUplanner</h1>
+
+      <p> Don't have an account? <%= link_to "Sign up now!", signup_path, class: "btn btn-xs btn-default" %> </p>
+  <% end %>
 </div>
