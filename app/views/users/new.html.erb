@@ -1,26 +1,36 @@
 <% provide(:title, 'Sign up') %>
 <h1>Sign up</h1>
-    <div class="row">
-      <div class="span6 offset3">
-        <div class="hero-unit">
-        <%= form_for(@user) do |f| %>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span2">
+            <%= form_for(@user) do |f| %>
 
-            <%= render 'shared/error_messages' %>
+                <%= render 'shared/error_messages' %>
 
-            <%= f.label :name %>
-            <%= f.text_field :name %>
+                <%= f.label :name %>
+                <%= f.text_field :name %>
 
-            <%= f.label :email %>
-            <%= f.text_field :email %>
+                <%= f.label :email %>
+                <%= f.text_field :email %>
 
-            <%= f.label :password %>
-            <%= f.password_field :password %>
+                <%= f.label :password %>
+                <%= f.password_field :password %>
 
-            <%= f.label :password_confirmation, "Confirm Password" %>
-            <%= f.password_field :password_confirmation %>
+                <%= f.label :password_confirmation, "Confirm Password" %>
+                <%= f.password_field :password_confirmation %>
+            </div>
+             <div class="span10">
+                <div class="hero-unit">
+                  <%= f.check_box_tag(:courses_taken) %>
+                  <%= f.label_tag(:courses_taken, "CSCI 1300") %>
+                  <%= f.check_box_tag(:courses_taken) %>
+                  <%= f.label_tag(:courses_taken, "CSCI 2270") %>
 
-            <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
-        <% end %>
-      </div>
+
+
+                <%= f.submit "Create my account", class: "btn btn-medium btn-default" %>
+                </div>
+             </div>
+           <% end %>
     </div>
 </div>
