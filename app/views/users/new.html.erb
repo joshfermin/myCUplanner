@@ -21,16 +21,16 @@
             </div>
              <div class="span10">
                 <div class="hero-unit">
-                  <%= f.check_box_tag(:courses_taken) %>
-                  <%= f.label_tag(:courses_taken, "CSCI 1300") %>
-                  <%= f.check_box_tag(:courses_taken) %>
-                  <%= f.label_tag(:courses_taken, "CSCI 2270") %>
+                  <%= check_box_tag(:courses_taken) %>
+                  <%= label_tag(:courses_taken, "CSCI 1300") %>
+                  <%= check_box_tag(:courses_taken) %>
+                  <%= label_tag(:courses_taken, "CSCI 2270") %>
 
 
 
                 <%= f.submit "Create my account", class: "btn btn-medium btn-default" %>
                 </div>
              </div>
-           <% end %>
+             <% end %>
     </div>
 </div>
