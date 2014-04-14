@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  selects :courses
+  
   def new
     @user = User.new # creates a User instance with null attr
   end
