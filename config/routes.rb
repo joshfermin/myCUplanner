@@ -1,4 +1,10 @@
 MyCUplanner::Application.routes.draw do
+
+  # courses routes
+  resources :courses
+  get "courses/new"
+  
+
   # static pages routes
   root :to => 'users#home'
   match '/about',   to: 'dynamic_pages#about',   via: 'get'
