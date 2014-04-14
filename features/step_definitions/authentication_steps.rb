@@ -21,10 +21,18 @@ When /^the user submits valid signin information$/ do
   click_button "Sign in"
 end
 
+<<<<<<< HEAD
 Then /^they should see their profile page$/ do
+=======
+Then /^they should see their home page$/ do
+>>>>>>> UserPrereqFunctionality
   expect(page).to have_title("myCUplanner")
 end
 
 Then /^they should see a signout link$/ do
   expect(page).to have_link('Sign out', href: signout_path)
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> UserPrereqFunctionality
