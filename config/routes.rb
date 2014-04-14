@@ -1,5 +1,9 @@
 MyCUplanner::Application.routes.draw do
+
+  # courses routes
   resources :courses
+  get "courses/new"
+  
 
   # static pages routes
   root :to => 'users#home'
