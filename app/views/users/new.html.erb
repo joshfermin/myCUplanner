@@ -19,6 +19,7 @@
                 <%= f.label :password_confirmation, "Confirm Password" %>
                 <%= f.password_field :password_confirmation %>
           </div>
+
           <div class="span10">
             <div class="hero-unit">
               <%= f.label :courses_taken, "CSCI 1300"%>
@@ -26,9 +27,9 @@
               <%= f.label :courses_taken, "CSCI 2270"%>
               <%= f.check_box :courses_taken, { :multiple => true }, "2270", nil %>
 
-            <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+              <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+            </div>
           </div>
-        </div>
 
         <% end %>
       </div>
