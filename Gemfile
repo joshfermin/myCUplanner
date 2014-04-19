@@ -27,7 +27,6 @@ gem 'jbuilder', '1.0.2'
 gem 'atomic', '1.1.16'
 gem 'sprockets', '2.11.0'
 gem 'bcrypt-ruby', '3.1.2' # for password hash
-gem 'activerecord-postgres-array' # allows arrays for pg
 
 group :doc do
   gem 'sdoc', '0.3.20', require: false
