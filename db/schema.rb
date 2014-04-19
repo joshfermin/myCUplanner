@@ -11,14 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140419213420) do
+ActiveRecord::Schema.define(version: 20140419212628) do
 
   create_table "courses", force: true do |t|
-    t.string   "course_number"
+    t.string   "subject_area"
+    t.integer  "course_number"
+    t.integer  "ext_number"
     t.string   "course_title"
-    t.string   "room"
     t.string   "instructor"
-    t.string   "time"
+    t.string   "day"
+    t.string   "start_time"
+    t.string   "end_time"
+    t.string   "building"
+    t.string   "room"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

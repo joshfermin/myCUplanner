@@ -12,24 +12,44 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :subject_area %><br>
+    <%= f.text_field :subject_area %>
+  </div>
+  <div class="field">
     <%= f.label :course_number %><br>
     <%= f.number_field :course_number %>
+  </div>
+  <div class="field">
+    <%= f.label :ext_number %><br>
+    <%= f.number_field :ext_number %>
   </div>
   <div class="field">
     <%= f.label :course_title %><br>
     <%= f.text_field :course_title %>
   </div>
   <div class="field">
-    <%= f.label :room %><br>
-    <%= f.text_field :room %>
-  </div>
-  <div class="field">
     <%= f.label :instructor %><br>
     <%= f.text_field :instructor %>
   </div>
   <div class="field">
-    <%= f.label :time %><br>
-    <%= f.text_field :time %>
+    <%= f.label :day %><br>
+    <%= f.text_field :day %>
+  </div>
+  <div class="field">
+    <%= f.label :start_time %><br>
+    <%= f.text_field :start_time %>
+  </div>
+  <div class="field">
+    <%= f.label :end_time %><br>
+    <%= f.text_field :end_time %>
+  </div>
+  <div class="field">
+    <%= f.label :building %><br>
+    <%= f.text_field :building %>
+  </div>
+  <div class="field">
+    <%= f.label :room %><br>
+    <%= f.text_field :room %>
   </div>
   <div class="actions">
     <%= f.submit %>
