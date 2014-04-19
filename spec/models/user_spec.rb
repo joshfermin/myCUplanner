@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe User do
   before do
-    @user = User.new(name: "Example User", email: "user@example.com",
+    @user = User.new(name: "Example User", email: "user@colorado.edu",
                      password: "foobar", password_confirmation: "foobar")
   end
 
@@ -61,7 +61,7 @@ describe User do
 
   describe "when email format is valid" do
     it "should be valid" do
-      addresses = %w[user@foo.COM A_US-ER@f.b.org frst.lst@foo.jp a+b@baz.cn]
+      addresses = %w[user@colorado.edu A_US-ER@colorado.edu frst.lst@colorado.edu a+b@colorado.edu]
       addresses.each do |valid_address|
         @user.email = valid_address
         expect(@user).to be_valid

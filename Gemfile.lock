@@ -25,6 +25,8 @@ GEM
       activesupport (= 4.0.3)
       arel (~> 4.0.0)
     activerecord-deprecated_finders (1.0.3)
+    activerecord-postgres-array (0.0.10)
+      activerecord
     activesupport (4.0.3)
       i18n (~> 0.6, >= 0.6.4)
       minitest (~> 4.2)
@@ -173,6 +175,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord-postgres-array
   atomic (= 1.1.16)
   bcrypt-ruby (= 3.1.2)
   bootstrap-sass (= 2.3.2.0)

@@ -61,6 +61,25 @@ class CoursesController < ApplicationController
     end
   end
 
+  require 'csv'
+
+  def csv_import
+    @parsed_file=CSV::Reader.parse(params[:dump][:file])
+    n=0
+    @parsed_file.each  do |row|
+      c=Course.new
+      c.job_title=row[1]
+      c.first_name=row[2]
+      c.last_name=row[3]
+      if c.save
+        n=n+1
+        GC.start if n%50==0
+      end
+      flash.now[:message]="CSV Import Successful,  #{n} new records added to data base"
+    end
+  end
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_course

@@ -10,7 +10,7 @@
                 <%= f.label :name %>
                 <%= f.text_field :name %>
 
-                <%= f.label :email %>
+                <%= f.label :email, "Email (@colorado.edu)" %>
                 <%= f.text_field :email %>
 
                 <%= f.label :password %>
@@ -21,12 +21,10 @@
           </div>
           <div class="span10">
             <div class="hero-unit">
-                <%= f.label :courses_taken, "CSCI 1300"%>
-                <%= f.check_box :courses_taken, :value => "CSCI 1300"%>
               <%= f.label :courses_taken, "CSCI 1300"%>
-              <%= f.check_box :courses_taken, :value => "1"%>
-              <%= f.label :courses_taken, "CSCI 1300"%>
-              <%= f.check_box :courses_taken, :value => "2"%>
+              <%= f.check_box :courses_taken, { :multiple => true }, "1300", nil %>
+              <%= f.label :courses_taken, "CSCI 2270"%>
+              <%= f.check_box :courses_taken, { :multiple => true }, "2270", nil %>
 
             <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
           </div>
