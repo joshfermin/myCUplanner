@@ -71,7 +71,6 @@ GEM
     factory_girl_rails (4.2.1)
       factory_girl (~> 4.2.0)
       railties (>= 3.0.0)
-    fastercsv (1.5.5)
     ffi (1.9.3)
     gherkin (2.12.2)
       multi_json (~> 1.3)
@@ -182,7 +181,6 @@ DEPENDENCIES
   cucumber-rails (= 1.4.0)
   database_cleaner!
   factory_girl_rails (= 4.2.1)
-  fastercsv
   jbuilder (= 1.0.2)
   jquery-rails (= 3.0.4)
   pg (= 0.15.1)
