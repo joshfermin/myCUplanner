@@ -23,7 +23,7 @@ describe CoursesController do
   # This should return the minimal set of attributes required to create a valid
   # Course. As you add validations to Course, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) { { "course_number" => "1" } }
+  let(:valid_attributes) { { "subject_area" => "MyString" } }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
@@ -85,14 +85,14 @@ describe CoursesController do
       it "assigns a newly created but unsaved course as @course" do
         # Trigger the behavior that occurs when invalid params are submitted
         Course.any_instance.stub(:save).and_return(false)
-        post :create, {:course => { "course_number" => "invalid value" }}, valid_session
+        post :create, {:course => { "subject_area" => "invalid value" }}, valid_session
         assigns(:course).should be_a_new(Course)
       end
 
       it "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
         Course.any_instance.stub(:save).and_return(false)
-        post :create, {:course => { "course_number" => "invalid value" }}, valid_session
+        post :create, {:course => { "subject_area" => "invalid value" }}, valid_session
         response.should render_template("new")
       end
     end
@@ -106,8 +106,8 @@ describe CoursesController do
         # specifies that the Course created on the previous line
         # receives the :update_attributes message with whatever params are
         # submitted in the request.
-        Course.any_instance.should_receive(:update).with({ "course_number" => "1" })
-        put :update, {:id => course.to_param, :course => { "course_number" => "1" }}, valid_session
+        Course.any_instance.should_receive(:update).with({ "subject_area" => "MyString" })
+        put :update, {:id => course.to_param, :course => { "subject_area" => "MyString" }}, valid_session
       end
 
       it "assigns the requested course as @course" do
@@ -128,7 +128,7 @@ describe CoursesController do
         course = Course.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Course.any_instance.stub(:save).and_return(false)
-        put :update, {:id => course.to_param, :course => { "course_number" => "invalid value" }}, valid_session
+        put :update, {:id => course.to_param, :course => { "subject_area" => "invalid value" }}, valid_session
         assigns(:course).should eq(course)
       end
 
@@ -136,7 +136,7 @@ describe CoursesController do
         course = Course.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Course.any_instance.stub(:save).and_return(false)
-        put :update, {:id => course.to_param, :course => { "course_number" => "invalid value" }}, valid_session
+        put :update, {:id => course.to_param, :course => { "subject_area" => "invalid value" }}, valid_session
         response.should render_template("edit")
       end
     end
