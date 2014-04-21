@@ -7,6 +7,8 @@ gem 'bootstrap-sass', '2.3.2.0'
 group :development, :test do
   gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '2.13.1'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :test do
@@ -27,6 +29,8 @@ gem 'jbuilder', '1.0.2'
 gem 'atomic', '1.1.16'
 gem 'sprockets', '2.11.0'
 gem 'bcrypt-ruby', '3.1.2' # for password hash
+gem 'jquery-rest-rails'
+gem 'fullcalendar-rails'
 
 group :doc do
   gem 'sdoc', '0.3.20', require: false

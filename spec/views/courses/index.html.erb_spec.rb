@@ -42,6 +42,5 @@ describe "courses/index" do
     assert_select "tr>td", :text => "Start Time".to_s, :count => 2
     assert_select "tr>td", :text => "End Time".to_s, :count => 2
     assert_select "tr>td", :text => "Building".to_s, :count => 2
-    assert_select "tr>td", :text => "Room".to_s, :count => 2
   end
 end
