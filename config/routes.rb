@@ -1,5 +1,7 @@
 MyCUplanner::Application.routes.draw do
 
+  resources :events
+
   # courses routes
   resources :courses
   get "courses/new"
