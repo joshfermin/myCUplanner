@@ -4,6 +4,7 @@ MyCUplanner::Application.routes.draw do
 
 
 
+  get "calendars/show"
   resources :events
 
   # courses routes
