@@ -27,6 +27,12 @@ Is currently deployed by heroku at: https://mycuplanner.herokuapp.com/
 		* Instructor
 		* Course Schedule
 		* Course Prerequisites
+		
+	3. Events Model:
+		* Event Title
+		* Start / End Time
+		* All day
+		* Description
 
 
 * Views:
@@ -46,5 +52,6 @@ Is currently deployed by heroku at: https://mycuplanner.herokuapp.com/
 * Controllers:
 	1. User controller
 	2. Class/calendar controller
+	3. Event Controller
 
 
