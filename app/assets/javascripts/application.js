@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
+//= require jquery.rest
 //= require bootstrap
 //= require turbolinks
 //= require jquery.rest
