@@ -40,7 +40,7 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create
-    @event = Event.new(params[:event])
+    @event = Event.new(event_params)
 
     respond_to do |format|
       if @event.save
@@ -52,6 +52,20 @@ class EventsController < ApplicationController
       end
     end
   end
+
+  #def create
+  #  if params[:event][:period] == "Does not repeat"
+  #    event = Event.new(event_params)
+  #  else
+  #    #      @event_series = EventSeries.new(:frequency => params[:event][:frequency], :period => params[:event][:repeats], :starttime => params[:event][:starttime], :endtime => params[:event][:endtime], :all_day => params[:event][:all_day])
+  #    event = EventSeries.new(event_params)
+  #  end
+  #  if event.save
+  #    render :nothing => true
+  #  else
+  #    render :text => event.errors.full_messages.to_sentence, :status => 422
+  #  end
+  #end
 
   # PUT /events/1
   # PUT /events/1.json
@@ -79,5 +93,11 @@ class EventsController < ApplicationController
       format.html { redirect_to events_url }
       format.json { head :no_content }
     end
+  end
+
+  private
+  def event_params
+    params.require(:event).permit(:title, :starts_at, :ends_at,
+                                 :all_day, :description)
   end
 end
