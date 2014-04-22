@@ -14,7 +14,6 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    raise
     if @user.save
       sign_in @user
       flash[:success] = "Welcome to myCUplanner" # flash notice that tells the user that the sign up was successful

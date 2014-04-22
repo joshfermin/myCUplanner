@@ -1,10 +1,4 @@
 MyCUplanner::Application.routes.draw do
-
-
-
-
-
-  get "calendars/show"
   resources :events
 
   # courses routes
@@ -30,8 +24,7 @@ MyCUplanner::Application.routes.draw do
   match '/signout', to: 'sessions#destroy',     via: 'delete'
 
 
-  resources :calendars
-  get 'calendar/show'
+  resource :calendar, :only => [:show]
   #match '/calendar', to 'calendar#show', via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

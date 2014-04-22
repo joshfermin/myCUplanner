@@ -31,6 +31,8 @@ gem 'sprockets', '2.11.0'
 gem 'bcrypt-ruby', '3.1.2' # for password hash
 gem 'jquery-rest-rails'
 gem 'fullcalendar-rails'
+gem 'devise', '3.0.0.rc'
+gem 'protected_attributes'
 
 group :doc do
   gem 'sdoc', '0.3.20', require: false
