@@ -5,8 +5,10 @@
       <nav>
         <ul class="nav pull-right">
           <li><%= link_to "Home", root_path %></li>
+          <% if signed_in? %>
           <li><%= link_to "Calendar", "/calendar" %></li>
           <li><%= link_to "Courses", "/courses" %></li>
+          <% end %>
           <% if signed_in? %>
               <li id="fat-menu" class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
