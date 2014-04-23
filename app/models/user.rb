@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   #attr_accessible :name, :email, :password, :password_confirmation
-  has_many :events
+  has_many :events, dependent: :destroy #arranges for the dependent events (i.e., the ones belonging to the given user) to be destroyed when the user itself is destroyed. This prevents userless events from being stranded in the database when admins choose to remove users from the system.
 
   has_secure_password
 

@@ -7,6 +7,7 @@ FactoryGirl.define do
   end
   factory :event do
     title "Rspec Test Event"
+    description "Rspec Test Event: description"
     user
   end
 end
