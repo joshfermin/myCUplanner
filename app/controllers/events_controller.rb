@@ -1,4 +1,7 @@
 class EventsController < ApplicationController
+  before_action :signed_in_user
+
+
   # GET /events
   # GET /events.json
   def index
