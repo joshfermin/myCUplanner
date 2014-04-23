@@ -82,4 +82,19 @@ describe User do
     end
     it { should_not be_valid}
   end
+
+  describe "event associations" do
+
+    before { @user.save }
+    let!(:older_event) do
+      FactoryGirl.create(:event, user: @user, created_at: 1.day.ago)
+    end
+    let!(:newer_event) do
+      FactoryGirl.create(:event, user: @user, created_at: 1.hour.ago)
+    end
+
+    it "should have the right microposts in the right order" do
+      expect(@user.events.to_a).to eq [newer_event, older_event]
+    end
+  end
 end

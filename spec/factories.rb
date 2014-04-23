@@ -5,4 +5,8 @@ FactoryGirl.define do
     password "foobar"
     password_confirmation "foobar"
   end
+  factory :event do
+    title "Rspec Test Event"
+    user
+  end
 end
