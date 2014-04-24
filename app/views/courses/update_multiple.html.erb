@@ -1,0 +1,48 @@
+<!-- At the top of this form we’ll put the opening form_tag. As the form isn’t going to be editing a particular course we’ll use a symbol rather than a variable that references a course. We’ll also need to specify a :url so that the form knows where to send its data and a :method so that PUT rather than POST is used. -->
+<%= form_for :course, :url => edit_multiple_courses_path, :html => { :method => :put } do |form| %>
+
+<!-- In the form we’ll need to pass through the ids of the courses that were passed to it,or they will be lost when the form is submitted and we won’t know which courses to update. We can pass the ids as a series of hidden fields and, as we’re doing that, also show a list of the courses that are being updated to the user. -->
+<ul>
+  <% for course in @courses %>
+  <li>
+    <%= h course.course_title %>
+    <%= hidden_field_tag "course_ids[]", course.id%>
+  </li>
+  <% end %>
+</ul>
+
+<!-- Next we’ll add the form elements for the attributes that a Courses has. There will be elements for the name, the category, the price, and for whether the course has been discontinued. When we submit this form we only want to update the fields that have had a value set against them, so for the fields that have a fixed number of options we’ll need to add a blank option so that the users can choose not update that field. -->
+
+
+<ol class="formList">
+<br/>
+  	<li>
+  		<%= collection_select(:course, :subject_area, Course.all, :id, :subject_area, :prompt => "---- Choose Subject ----")%>&nbsp;
+	</li>
+	<li>
+		<%= collection_select(:course, :instructor, Course.all, :id, :instructor, :prompt => "---- Choose Instructor ----")%>&nbsp;
+	</li>
+	<li>
+		<%= form.label :maximum_students, "Limit Number" %>
+		<%= form.text_field :maximum_students%> &nbsp;
+	</li>
+	<li>
+		<%= form.label :available, "Available" %>
+	</li>
+	<li>
+		<%= form.select :available, [["Yes",1], ["No",0]], :include_blank => true  %>
+  		<br/><br/>
+	</li>
+	<li>
+		<%= form.label :course_title, "Course Title (disabled)" %>
+	</li>
+	<li>
+		<%= form.text_field :course_title, :size => 26, :disabled => true%> &nbsp;
+	</li>
+<br/>
+
+  <%= form.submit "Submit" %>
+
+</ol>
+
+<% end %>
