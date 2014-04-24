@@ -10,14 +10,15 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require bootstrap
 //= require jquery
 //= require jquery_ujs
 //= require jquery.ui.all
 //= require jquery.rest
+//= require bootstrap
 //= require turbolinks
 //= require jquery.rest
 //= require fullcalendar
+//= require bootstrap
 //= require_tree .
 
 
