@@ -33,6 +33,7 @@ gem 'jquery-rest-rails'
 gem 'fullcalendar-rails'
 gem 'devise', '3.0.0.rc'
 gem 'jquery-ui-rails'
+gem 'will_paginate'
 
 group :doc do
   gem 'sdoc', '0.3.20', require: false

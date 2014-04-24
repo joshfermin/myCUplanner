@@ -1,6 +1,10 @@
 class User < ActiveRecord::Base
   #attr_accessible :name, :email, :password, :password_confirmation
 
+  # "dependent: :destroy" arranges for the dependent microposts (i.e., the ones belonging to the given user) 
+  # to be destroyed when the user itself is destroyed. This prevents userless microposts 
+  # from being stranded in the database when admins choose to remove users from the system.
+  has_many :courses, dependent: :destroy
   has_secure_password
 
   before_save { self.email = email.downcase }
