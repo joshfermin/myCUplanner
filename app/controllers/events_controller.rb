@@ -5,8 +5,10 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.scoped
-    @events = Event.between(params['start'], params['end']) if (params['start'] && params['end'])
+    @user = current_user.id
+
+    @events = Event.where(["user_id =  ?", @user])
+    #@events = Event.between(params['start'], params['end']) if (params['start'] && params['end'])
     respond_to do |format|
       format.html # index.html.erb
       format.json { render :json => @events }
@@ -17,7 +19,6 @@ class EventsController < ApplicationController
   # GET /events/1.json
   def show
     @event = Event.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render :json => @event }
@@ -55,20 +56,6 @@ class EventsController < ApplicationController
       end
     end
   end
-
-  #def create
-  #  if params[:event][:period] == "Does not repeat"
-  #    event = Event.new(event_params)
-  #  else
-  #    #      @event_series = EventSeries.new(:frequency => params[:event][:frequency], :period => params[:event][:repeats], :starttime => params[:event][:starttime], :endtime => params[:event][:endtime], :all_day => params[:event][:all_day])
-  #    event = EventSeries.new(event_params)
-  #  end
-  #  if event.save
-  #    render :nothing => true
-  #  else
-  #    render :text => event.errors.full_messages.to_sentence, :status => 422
-  #  end
-  #end
 
   # PUT /events/1
   # PUT /events/1.json
