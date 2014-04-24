@@ -17,14 +17,36 @@ class CoursesController < ApplicationController
 
   # In our application Courses is a RESTful resource so the two new actions won’t 
   # be accessible without making a change to our routes file. As we’re adding methods 
-  # that will work on a collection of products we’ll use the :collection option to 
+  # that will work on a collection of courses we’ll use the :collection option to 
   # add our two new actions.
   def edit_multiple
     @courses = Course.find(params[:course_ids])
   end
-    
+  
+  # The update_multiple action starts by getting the array of course ids that we passed 
+  # through from the other form as a list of hidden fields. We then loop through each 
+  # course and update its attributes. As we only want to update the attributes that aren’t 
+  # empty we use reject to loop through each parameter and remove the ones that have a blank 
+  # value from the parameter array. Note that we’re using update_attributes! with a bang (!) 
+  # as we don’t have any validations on our model. If this was a production application we’d 
+  # have validations but that’s beyond the scope of this episode. Using update_attributes! 
+  # this way will mean that an exception is thrown if something is invalid. Once all of the 
+  # courses have been updated we set a flash message and return back to the courses listing page.  
+  # def update_multiple
+  #   @courses = Course.find(params[:course_ids])
+  #   @courses.each do |course|
+  #     course.update_attributes!(params[:course].reject { |k,v| v.blank? })
+  #   end
+  #   flash[:notice] = "Updated selected courses!"
+  #   redirect_to courses_path
+  # end
   def update_multiple
-     
+    @courses = Course.find(params[:course_ids])
+    # @courses.each do |course|
+    #   course.update_attributes!(params[:course].reject {|k,v| v.blank?} )
+    # end
+    flash[:notice] = "Updated Selected Courses"
+    redirect_to courses_path
   end
 
   # GET /courses/new
@@ -105,4 +127,12 @@ class CoursesController < ApplicationController
     def course_params
       params.require(:course).permit(:subject_area, :course_number, :ext_number, :course_title, :instructor, :day, :start_time, :end_time, :building, :room)
     end
+
+    # def sort_column
+    #   Course.column_names.include?(params[:sort]) ? params[:sort] : "name"
+    # end
+
+    # def sort_direction
+    #   %w[asc desc].include?(params[:direction]) ?  params[:direction] : "asc"
+    # end
 end

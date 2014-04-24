@@ -2,8 +2,8 @@ MyCUplanner::Application.routes.draw do
   resources :events
 
   # courses routes
-  resources :courses
-  get "courses/new"
+  # resources :courses
+  # get "courses/new"
   
   # In our application Products is a RESTful resource so the two new actions won’t be accessible 
   # without making a change to our routes file. As we’re adding methods that will work on a 
