@@ -1,4 +1,7 @@
 class EventsController < ApplicationController
+  before_action :signed_in_user
+
+
   # GET /events
   # GET /events.json
   def index
@@ -40,7 +43,7 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create
-    @event = Event.new(event_params)
+    @event = current_user.events.build(event_params)
 
     respond_to do |format|
       if @event.save

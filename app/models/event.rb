@@ -1,4 +1,10 @@
 class Event < ActiveRecord::Base
+  belongs_to :user
+  default_scope -> { order('created_at DESC') }
+  validates :user_id, presence: true
+  #validates :title, presence: true, length: { maximum: 140 }
+
+
   scope :between, lambda {|start_time, end_time|
     {:conditions => ["? < starts_at < ?", Event.format_date(start_time), Event.format_date(end_time)] }
   }
