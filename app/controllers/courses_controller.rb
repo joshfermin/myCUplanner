@@ -12,6 +12,14 @@ class CoursesController < ApplicationController
   def show
   end
 
+  def edit_multiple
+    
+  end
+    
+  def update_multiple
+     
+  end
+
   # GET /courses/new
   def new
     @course = Course.new

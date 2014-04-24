@@ -5,6 +5,22 @@ MyCUplanner::Application.routes.draw do
   resources :courses
   get "courses/new"
   
+  # In our application Products is a RESTful resource so the two new actions won’t be accessible 
+  # without making a change to our routes file. As we’re adding methods that will work on a 
+  # collection of products we’ll use the :collection option to add our two new actions.
+
+  # The :collection option takes a hash of values. Each key is the name of an action and each value 
+  # is the method that that action should use. As mentioned earlier we’re using POST 
+  # for the edit_multiple action, even though ideally we should use GET.
+  # resources :courses, :collection => { :edit_multiple => :post, :update_multiple => :put }
+
+  resources :courses do
+    collection do
+      post 'edit_multiple'
+      put 'update_multiple'
+      post 'delete_multiple'
+    end
+  end
 
   # static pages routes
   root :to => 'users#home'
