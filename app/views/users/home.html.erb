@@ -1,18 +1,213 @@
 <% if signed_in? %>
-    <div class="center hero-unit">
-      <h1>Welcome Back!</h1>
-      <div class="btn-group btn-group-justified">
-        <button type="button" class="btn btn-default">Left</button>
-        <button type="button" class="btn btn-default">Middle</button>
-        <button type="button" class="btn btn-default">Right</button>
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <img>
+          <%= link_to image_tag("slide-01.jpg"), root_path %>
+          </img>
+          <div class="center container">
+            <div class="carousel-caption">
+              <h1 style=color:white>Welcome Back</h1>
+              <p class="lead" style=color:#D0D0D0>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p></p>
+              <a class="btn btn-xs btn-default" href="#">Sign up today</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img>
+          <%= link_to image_tag("slide-02.jpg"), root_path %>
+          </img>
+          <div class="center container">
+            <div class="carousel-caption">
+              <h1 style=color:white>Example headline</h1>
+              <p class="lead" style=color:#D0D0D0  >Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p></p>
+              <a class="btn btn-xs btn-default" href="#">Sign up today</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img>
+          <%= link_to image_tag("slide-03.jpg"), root_path %>
+          </img>
+          <div class="center container">
+            <div class="carousel-caption">
+              <h1 style=color:white>Example headline</h1>
+              <p class="lead" style=color:#D0D0D0  >Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p></p>
+              <a class="btn btn-xs btn-default" href="#">Sign up today</a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div><!-- /.carousel -->
 
 
+    <!-- Marketing messaging and featurettes
+   ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="span4">
+          <%=link_to image_tag("calendar.png"), '/calendar'  %>
+          <h2>Calendar</h2>
+          <p>Ready to start planning your next steps for next semester? Click here to go to the calendar.</p>
+          <p><a class="btn" href="/calendar">View details &raquo;</a></p>
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <%=link_to image_tag("classroom.png"), '/courses' %>
+          <h2>Courses</h2>
+          <p>Want to see the computer science courses offered next semester? Go here to find more details.</p>
+          <p><a class="btn" href="courses">View details &raquo;</a></p>
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <%=link_to image_tag("schedule.jpg", class: "img-circle"), '/events'  %>
+          <h2>Schedule</h2>
+          <p>Done editing your calendar? Come here to see an overview of your current schedule and upcoming events.</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div><!-- /.span4 -->
+      </div><!-- /.row -->
 
 <% else %>
-    <div class="center hero-unit">
-      <h1>Welcome to myCUplanner</h1>
-      <p> Don't have an account? <%= link_to "Sign up now!", signup_path, class: "btn btn-xs btn-default" %> </p>
+
+    <!-- Carousel
+   ================================================== -->
+    <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <img>
+          <%= link_to image_tag("slide-01.jpg"), root_path %>
+          </img>
+          <div class="center container">
+            <div class="carousel-caption">
+              <h1 style=color:white>What is myCUplanner?</h1>
+              <p class="lead" style=color:#D0D0D0  >myCUplanner is a scheduling app aimed at computer science students attending the University of Colorado at Boulder. Interested? <a href="/signup">Sign up today!</a> Already have an account? <a href="/signin">Sign in.</a></p>
+              <p></p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <img>
+          <%= link_to image_tag("slide-02.jpg"), root_path %>
+          </img>
+          <div class="center container">
+            <div class="carousel-caption">
+              <h1 style=color:white>More Info?</h1>
+              <p class="lead" style=color:#D0D0D0>This project was made for the software methods and tools course (CSCI 3308), focused on web development. If you want to get to know more about this app, click the about button below, or visit the <a href="https://github.com/joshfermin/myCUplanner">github page</a></p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div><!-- /.carousel -->
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="featurette">
+      <img class="featurette-image pull-right" src="assets/img/browser-icon-chrome.png">
+      <h2 class="featurette-heading">First featurette headling. <span class="muted">It'll blow your mind.</span></h2>
+      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
     </div>
+
+    <hr class="featurette-divider">
+
+    <div class="featurette">
+      <img class="featurette-image pull-left" src="assets/img/browser-icon-firefox.png">
+      <h2 class="featurette-heading">Oh yeah, it's that good. <span class="muted">See for yourself.</span></h2>
+      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="featurette">
+      <img class="featurette-image pull-right" src="assets/img/browser-icon-safari.png">
+      <h2 class="featurette-heading">And lastly, this one. <span class="muted">Checkmate.</span></h2>
+      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+
+    </div><!-- /.container -->
+
+
 <% end %>
+
+
+
+
+    <!--&lt;!&ndash;<div class="center hero-unit">&ndash;&gt;-->
+      <!--&lt;!&ndash;<h1>Welcome Back!</h1>&ndash;&gt;-->
+      <!--&lt;!&ndash;<div class="btn-group btn-group-justified">&ndash;&gt;-->
+        <!--&lt;!&ndash;<button type="button" class="btn btn-default">Left</button>&ndash;&gt;-->
+        <!--&lt;!&ndash;<button type="button" class="btn btn-default">Middle</button>&ndash;&gt;-->
+        <!--&lt;!&ndash;<button type="button" class="btn btn-default">Right</button>&ndash;&gt;-->
+      <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+
+    <!--<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">-->
+      <!--&lt;!&ndash; Indicators &ndash;&gt;-->
+      <!--<ol class="carousel-indicators">-->
+        <!--<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>-->
+        <!--<li data-target="#carousel-example-generic" data-slide-to="1"></li>-->
+        <!--<li data-target="#carousel-example-generic" data-slide-to="2"></li>-->
+      <!--</ol>-->
+
+      <!--&lt;!&ndash; Wrapper for slides &ndash;&gt;-->
+      <!--<div class="carousel-inner">-->
+        <!--<div class="item active constant">-->
+          <!--<img>-->
+          <!--<#%= link_to image_tag("flatirons.jpg"), root_path %>-->
+          <!--</img>-->
+
+          <!--<div class="carousel-caption">-->
+            <!--<h1 style=color:white>Welcome Back!</h1>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+
+      <!--&lt;!&ndash; Controls &ndash;&gt;-->
+      <!--<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">-->
+        <!--<span class="glyphicon glyphicon-chevron-left"></span>-->
+      <!--</a>-->
+      <!--<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">-->
+        <!--<span class="glyphicon glyphicon-chevron-right"></span>-->
+      <!--</a>-->
+    <!--</div>-->
+
+    <!--&lt;!&ndash;<a class="btn btn-large btn-primary" href="#">Sign up today</a>&ndash;&gt;-->
+
+
+
+
+    <!--<div class="center hero-unit">-->
+      <!--<h1>Welcome to myCUplanner</h1>-->
+
+    <!--</div>-->
+
+    <!--<div class="text">-->
+      <!--<h1 style=color:black;">What is myCUplanner?</h1>-->
+      <!--<h2 class ="center"> Don't have an account? <#%= link_to "Sign up now!", signup_path, class: "btn btn-xs btn-default" %> </h2>-->
+      <!--<h2>University of Colorado at Boulder</h2>-->
+      <!--<p>myCUplanner is a scheduling app aimed at computer science students attending the University of Colorado at Boulder. This project was made for the software methods and tools course (CSCI 3308), focused on web development. If you want to get to know more about this app, click the about button below, or visit the <a href="https://github.com/joshfermin/myCUplanner">github page</a> </p>-->
+      <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>-->
+      <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>-->
+    <!--</div>-->
