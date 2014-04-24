@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require jquery.ui.all
 //= require jquery.rest
+//= require bootstrap
 //= require turbolinks
 //= require jquery.rest
 //= require fullcalendar
