@@ -11,12 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140424235459) do
-
-  create_table "calendars", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 20140425014457) do
 
   create_table "courses", force: true do |t|
     t.string   "subject_area"
@@ -31,17 +26,10 @@ ActiveRecord::Schema.define(version: 20140424235459) do
     t.string   "room"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
-  create_table "event_series", force: true do |t|
-    t.integer  "frequency",  default: 1
-    t.string   "period",     default: "monthly"
-    t.datetime "starttime"
-    t.datetime "endtime"
-    t.boolean  "all_day",    default: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+  add_index "courses", ["user_id", "created_at"], name: "index_courses_on_user_id_and_created_at"
 
   create_table "events", force: true do |t|
     t.string   "title"
@@ -66,7 +54,6 @@ ActiveRecord::Schema.define(version: 20140424235459) do
     t.text     "courses_taken"
     t.string   "first_name"
     t.string   "last_name"
-    t.integer  "user_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
