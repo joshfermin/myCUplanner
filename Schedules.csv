@@ -1,130 +1,1 @@
-Subject Area,Course Number,Extension Number,Course Title,Instructor,Day,Start Time,End Time,Building,Room
-CSCI,1000,1,Computer Science as a Field of Study,Lewis,M,5:00 PM,550pm,ECCR,1B40
-CSCI,1220,1,Virtual Worlds: An Introduction to Computer Science (Combined with ATLS 1220),Bennett,T/TH,930am,1045am,ATLS,100?
-CSCI,1300,10,Computer Science 1: Starting Programming (Previous programming experience  required),Hoenigman,MWF,10:00 AM,1050am,GOLDA,2B70
-CSCI,1300,301,REC,TA,T,8:00 AM,850am,ECCS,235
-CSCI,1300,302,REC,TA,T,9:00 AM,950am,ECCS,235
-CSCI,1300,303,REC,TA,T,10:00 AM,1050am,ECCS,235
-CSCI,1300,304,REC,TA,T,11:00 AM,1150am,ECCS,235
-CSCI,1300,305,REC,TA,T,1:00 PM,150pm,ECCS,235
-CSCI,1300,306,REC,TA,T,2:00 PM,250pm,ECCS,235
-CSCI,1300,307,REC,TA,T,3:00 PM,350pm,ECCS,235
-CSCI,1300,308,REC,TA,T,4:00 PM,450m,ECCS,235
-CSCI,1300,309,REC,TA,T,5:00 PM,550pm,ECCS,235
-CSCI,1310,100,Computer Science 1: Programming (For students with no programming  experience),Boese,MWF,1:00 PM,150pm,MUEN,E050
-CSCI,1300,310,REC,TA,W,8:00 AM,850am,ECCS,235
-CSCI,1300,311,REC,TA,W,9:00 AM,950am,ECCS,235
-CSCI,1300,312,REC,TA,W,11:00 AM,1150am,ECCS,235
-CSCI,1300,313,REC,TA,W,2:00 PM,250pm,ECCS,235
-CSCI,1300,314,REC,TA,TH,8:00 AM,850am,ECCS,235
-CSCI,1300,315,REC,TA,TH,9:00 AM,950am,ECCS,235
-CSCI,1300,316,REC,TA,TH,10:00 AM,1050am,ECCS,235
-CSCI,1300,317,REC,TA,TH,11:00 AM,1150am,ECCS,235
-CSCI,1300,318,REC,TA,TH,1:00 PM,150pm,ECCS,235
-CSCI,1300,319,REC,TA,TH,1:00 PM,250pm,ECCS,235
-CSCI,1300,320,REC,TA,TH,3:00 PM,350pm,ECCS,235
-CSCI,1300,321,REC,TA,TH,4:00 PM,450m,ECCS,235
-CSCI,1300,322,REC,TA,TH,5:00 PM,550pm,ECCS,235
-CSCI,2270,10,Computer Science 2: Data Structures,CSEN Staff,MWF,3:00 PM,350pm,MATH,100
-CSCI,2270,11,REC,TA,T,930am,1045am,ECCS,112C
-CSCI,2270,12,REC,TA,T,11:00 AM,1215am,ECCS,112C
-CSCI,2270,13,REC,TA,T,1230pm,145pm,ECCS,112C
-CSCI,2270,14,REC,TA,T,2:00 PM,315pm,ECCS,112C
-CSCI,2270,15,REC,TA,T,330pm,445pm,ECCS,112C
-CSCI,2270,16,REC,TA,T,5:00 PM,615pm,ECCS,112C
-CSCI,2270,17,REC,TA,TH,930am,1045am,ECCS,112C
-CSCI,2270,18,REC,TA,TH,11:00 AM,1215pm,ECCS,112C
-CSCI,2270,19,REC,TA,TH,1230pm,145pm,ECCS,112C
-CSCI,2270,20,REC,TA,TH,2:00 PM,315pm,ECCS,112C
-CSCI,2270,21,REC,TA,TH,330pm,445pm,ECCS,112C
-CSCI,2270,22,REC,TA,TH,5:00 PM,615pm,ECCS,112C
-CSCI,2400,10,Computer Systems,Han,T/TH,1230pm,145pm,ECCR,265
-CSCI,2400,11,REC,TA,M,9:00 AM,950am,ECCS,112C
-CSCI,2400,12,REC,TA,M,10:00 AM,1050am,ECCS,112C
-CSCI,2400,13,REC,TA,M,11:00 AM,1150am,ECCS,112C
-CSCI,2400,14,REC,TA,M,1:00 PM,150pm,ECCS,112C
-CSCI,2400,15,REC,TA,M,2:00 PM,250pm,ECCS,112C
-CSCI,2400,16,REC,TA,M,3:00 PM,350pm,ECCS,112C
-CSCI,2820,1,Linear Algebra with Computer Science Applications,Jessup,MW,4:00 PM,515pm,,
-CSCI,2824,1,Discrete Structures,Eisenberg,MWF,1:00 PM,150pm,MATH,100
-CSCI,3002,1,HCCFndtns/UserCntrdDesignDev1,Lewis,MWF,11:00 AM,1150am,ITLL,1B50
-CSCI,3104,10,Algorithms,Lv,TTH,11:00 AM,1215pm,,
-CSCI,3104,11,REC,TA,F,9:00 AM,950am,,
-CSCI,3104,12,REC,TA,F,10:00 AM,1050pm,,
-CSCI,3104,13,REC,TA,F,11:00 PM,1150pm,,
-CSCI,3104,14,REC,TA,F,1:00 PM,150pm,,
-CSCI,3104,15,REC,TA,F,2:00 PM,250pm,,
-CSCI,3112,801,HCC Professional Development,Lewis,TBA,,,,
-CSCI,3155,10,Principles of Programming Languages,Staff,T/TH,930am,1045am,,
-CSCI,3155,11,REC,TA,W,9:00 AM,950am,,
-CSCI,3155,12,REC,TA,W,10:00 AM,1050am,,
-CSCI,3155,13,REC,TA,W,11:00 AM,1150am,,
-CSCI,3155,14,REC,TA,W,1:00 PM,150pm,,
-CSCI,3202,1,Introduction to Artificial Intelligence,Hoenigman,MWF,9:00 AM,950am,MUEN,E0046
-CSCI,3287,2,Database and Information Systems (Combined with CSCI 7717-002),Staff,T/TH,330pm,445pm,,
-CSCI,3302,10,Introduction to Robotics,Correll,W,10:00 AM,1130am,,
-CSCI,3302,11,Lab,Correll,F,10:00 PM,1230pm,ECCS,112C
-CSCI,3308,1,Software Engineering Methods and Tools,Boese,MF,3:00 PM,350pm,ECCR,265
-CSCI,3308,11,Lab,TA,W,9:00 AM,1050am,ECCS,112C
-CSCI,3308,12,Lab,TA,W,11:00 PM,1250pm,ECCS,112C
-CSCI,3308,13,Lab,TA,W,1:00 PM,250pm,ECCS,112C
-CSCI,3308,14,Lab,TA,W,3:00 PM,450pm,ECCS,112C
-CSCI,3702,1,"Cognitive Science (Combined with LING3005, PHIL3310, PSYC3005)",Eisenberg,MWF,2:00 PM,250pm,,
-CSCI,3753,10,Operating Systems,Staff,TTH,1230pm,145pm,ECEE,1B32
-CSCI,3753,11,REC,TA,M,9:00 AM,950am,,
-CSCI,3753,12,REC,TA,M,10:00 AM,1050am,,
-CSCI,3753,13,REC,TA,M,11:00 AM,1150am,,
-CSCI,4113,1,Unix System Administration (Combined with TLEN 5833-001),Dehus,TTH,2:00 PM,315pm,CAETE,
-CSCI,4123,10,Network Laboratory (Combined with TLEN 5460),Santos,M,130pm,430pm,,
-CSCI,4123,11,Network Lab (Combined with TLEN 5460),Santos,F,730pm,1030pm,,
-CSCI,4229,1,Computer Graphics (Combined with CSCI 5229-001),Schre√å_der,TH,5:00 PM,730PM,ECCS,1B12
-CSCI,4273,1,Network Systems (Combined with CSCI 5273-001),Mishra,MW,4:00 PM,515PM,ECCS,1B12
-CSCI,4308,10,Software Engineering Project 1,Stafford,T,5:00 PM,730pm,,
-CSCI,4308,11,Software Engineering Project 1 REC,TBA,TBA,,,,
-CSCI,4314,1,"Algorithms: Molecularbio (Combined with CSCI 4314-002, MCDB 4314, MCDB  5314) ",Goldberg,TTH,1230pm,145pm,,
-CSCI,4328,800,Software Project Management and Mentoring,Stafford,T,5:00 PM,730pm,,
-CSCI,4328,801,Software Project Management and Mentoring REC,TBA,TBA,,,,
-CSCI,4338,10,Interdisciplinary Software Project Management,Stafford,T,5:00 PM,730pm,,
-CSCI,4338,800,Interdisciplinary Software Project Management REC,TBA,TBA,,,,
-CSCI,4448,1,Object-Oriented Analysis and Design (Combined with CSCI 5448-001),Anderson,TTH,1230pm,145pm,ECCS,1B28
-CSCI,4576,10,High-Performance Scientific Computing 1 (Combined with CSCI 5576-010),Tufo,T/TH,930am,1045am,,
-CSCI,4576,11,High Performance Scientific Computing 1 Lab (Combined with CSCI 5576-011),Tufo,W,4:00 PM,550pm,,
-CSCI,4593,1,Computer Organization (Combined with ECEN 4593),ECEN Staff,MWF,12:00 PM,1250pm,,
-CSCI,4809,1,"Computer Animation (Combined with CSCI 5809, ATLS 4809, ATLS 5809)",King,T/TH,11:00 AM,1215pm,ATLS104,
-CSCI,4810,2,Seminar in Computational Biology (Combined with 6810-001),Goldberg,T,330pm,420pm,,
-CSCI,4830,1,Tpcs: Ethical Hacking (Combined with CSCI 7000-001),Black,MWF,10:00 AM,1050am,ECCS,1B14
-CSCI,4830,2,Tpcs: HCC Big Data Computing (Combined with CSCI 7000-002),Yeh,M,4:00 PM,630pm,,
-CSCI,4830,3,Tpcs: Datacenter Scale Computing (Combined with CSCI 7000-003),Grunwald,TTH,1230pm,145pm,ECCS,1B14
-CSCI,5135,1,Computer Aided Verification (Combined with ECEN 5139,Cerny,MW,3:00 PM,415pm,ECEE,265
-CSCI,5229,1,Computer Graphics (Combined with CSCI 4229-001),Schre√å_der,TH,5:00 PM,730PM,ECCS,1B12
-CSCI,5273,1,Network Systems (Combined with CSCI 4273-001 and ECEN 5023-001),Mishra,MW,4:00 PM,515pm,ECCS,1B12
-CSCI,5314,1,"Algorithms: Molecularbio (Combined with CSCI 4314-002, MCDB 4314, MCDB  5314) ",Goldberg,MW,4:00 PM,515pm,,
-CSCI,5352,1,Network Analysis and Modeling,Clauset,TTH,1230pm,145pm,ECCS,1B12
-CSCI,5448,1,Object-Oriented Analysis and Design (Combined with CSCI 4448-001),Anderson,TTH,1230pm,145pm,ECCS,1B28
-CSCI,5573,1,Advanced Operating Systems (Combined with ECEN 5573),Mishra,T/TH,2:00 PM,315pm,,
-CSCI,5576,10,High-Performance Scientific Computing 1 (Combined with CSCI 4576-010),Tufo,T/TH,930am,1045am,,
-CSCI,5576,11,High Performance Scientific Computing 1 Lab (Combined with CSCI 4576-011),,W,4:00 PM,550pm,,
-CSCI,5606,1,Principles of Numerical Computation,Cai,TTH,2:00 PM,315pm,,
-CSCI,5608,1,Software Project Management,MacMillan,M,530pm,8:00 PM,ECCS,1B14
-CSCI,5636,1,Numerical Solution of Partial Differential Equations,Cai,MW,2:00 PM,430pm,,
-CSCI,5646,1,Numerical Linear Algebra,Jessup,MW,11:00 AM,1215pm,,
-CSCI,5809,1,"Computer Animation (Combined with CSCI 5809, ATLS 4809, ATLS 5809)",King,MW,11:00 AM,1215pm,ATLS104,
-CSCI,5832,1,Natural Language Processing (Combined with LING 5832-001,Staff,T/TH,3:30 PM,445pm,,
-CSCI,5839,1,User Centered Design,Lewis,TTH,2:00 PM,315pm,ECEE,1B32
-CSCI,5919,1,HCI: Survey and Synthesis 1,Palen,W,4:00 PM,630pm,DLC,170
-CSCI,6000,1,Introduction to the Computer Science PhD Program,Lewis,M,4:00 PM,450pm,,
-CSCI,6810,1,Seminar in Computational Biology (Combined with CSCI 4810-002),Goldberg,M,1:00 PM,150pm,,
-CSCI,7000,1,Tpcs: Ethical Hacking (Combined with CSCI 4830-001),Black,MWF,10:00 AM,1050am,ECCS,1B14
-CSCI,7000,2,Tpcs: HCC Big Data Computing (CSCI 4830-002),Yeh,M,4:00 PM,630pm,,
-CSCI,7000,3,Tpcs: Datacenter Scale Computing (Combined with CSCI 4830-003),Grunwald,TTH,1230pm,145pm,ECCS,1B14
-CSCI,7000,4,Tpcs: Systems and Algorithms for Massive Data Applications,Lv,TTH,1230pm,145pm,,
-CSCI,7000,5,"Tpcs: Mdlng, Verifctn & Cntrl for Cybr-Phys Sys",Sankaranarayanan,TTH,930am,1045am,,
-CSCI,7000,6,Tpcs: To Be Determined,Tufo,,,,,
-CSCI,7135,1,Tpcs:  Program Analysis,Chang,MW,4:00 PM,515pm,,
-CSCI,7154,1,Tpcs:  Reading in Formal Methods - 1credit hr.,Sankaranarayanan,TU,3:30 PM,420pm,,
-CSCI,7222,1,Probabilistic Models of Human and Artificial Intelligence,Mozer,T/TH,2:00 PM,315pm,,
-CSCI,7412,1,"Cog Sci Practicum 1 (Combined with EDUC 6506, LING 7415, PHIL 7415, PSYC  7415) ",Sumner,M,12:00 PM,2:00 PM,,
-CSCI,7422,1,"Cog Sci Practicum 2 (Combined with EDUC 6516, LING 7425, PHIL 7425, PSYC  7425) ",Sumner,M,12:00 PM,2:00 PM,,
-CSCI,7717,2,Tpcs: Database Sys (Combined with CSCI 3287-002),Staff,,,,,
-CSCI,7772,1,Tpcs in Cognitive Science,Sumner,T/TH,330pm,445pm,,
-TLEN,5833,1,Unix System Admin (Combined with CSCI 4113-001),Dehus,TTH,2:00 PM,315pm,CAETE,
+CSCI,1000,1,Computer Science as a Field of Study,Lewis,M,23:00:00,23:50:00,ECCR,1B40CSCI,1220,1,Virtual Worlds: An Introduction to Computer Science (Combined with ATLS 1220),Bennett,T/TH,15:30:00,16:45:00,ATLS,100?CSCI,1300,10,Computer Science 1: Starting Programming (Previous programming experience  required),Hoenigman,M/W/F,16:00:00,16:50:00,GOLDA,2B70CSCI,1300,301,REC,TA,T,14:00:00,14:50:00,ECCS,235CSCI,1300,302,REC,TA,T,15:00:00,15:50:00,ECCS,235CSCI,1300,303,REC,TA,T,16:00:00,16:50:00,ECCS,235CSCI,1300,304,REC,TA,T,17:00:00,17:50:00,ECCS,235CSCI,1300,305,REC,TA,T,19:00:00,19:50:00,ECCS,235CSCI,1300,306,REC,TA,T,20:00:00,20:50:00,ECCS,235CSCI,1300,307,REC,TA,T,21:00:00,21:50:00,ECCS,235CSCI,1300,308,REC,TA,T,22:00:00,22:50:00,ECCS,235CSCI,1300,309,REC,TA,T,23:00:00,23:50:00,ECCS,235CSCI,1310,100,Computer Science 1: Programming (For students with no programming  experience),Boese,M/W/F,19:00:00,19:50:00,MUEN,E050CSCI,1300,310,REC,TA,W,14:00:00,14:50:00,ECCS,235CSCI,1300,311,REC,TA,W,15:00:00,15:50:00,ECCS,235CSCI,1300,312,REC,TA,W,17:00:00,17:50:00,ECCS,235CSCI,1300,313,REC,TA,W,20:00:00,20:50:00,ECCS,235CSCI,1300,314,REC,TA,TH,14:00:00,14:50:00,ECCS,235CSCI,1300,315,REC,TA,TH,15:00:00,15:50:00,ECCS,235CSCI,1300,316,REC,TA,TH,16:00:00,16:50:00,ECCS,235CSCI,1300,317,REC,TA,TH,17:00:00,17:50:00,ECCS,235CSCI,1300,318,REC,TA,TH,19:00:00,19:50:00,ECCS,235CSCI,1300,319,REC,TA,TH,19:00:00,20:50:00,ECCS,235CSCI,1300,320,REC,TA,TH,21:00:00,21:50:00,ECCS,235CSCI,1300,321,REC,TA,TH,22:00:00,22:50:00,ECCS,235CSCI,1300,322,REC,TA,TH,23:00:00,23:50:00,ECCS,235CSCI,2270,10,Computer Science 2: Data Structures,CSEN Staff,M/W/F,21:00:00,21:50:00,MATH,100CSCI,2270,11,REC,TA,T,15:30:00,16:45:00,ECCS,112CCSCI,2270,12,REC,TA,T,17:00:00,18:15:00,ECCS,112CCSCI,2270,13,REC,TA,T,18:30:00,19:45:00,ECCS,112CCSCI,2270,14,REC,TA,T,20:00:00,21:15:00,ECCS,112CCSCI,2270,15,REC,TA,T,21:30:00,22:45:00,ECCS,112CCSCI,2270,16,REC,TA,T,23:00:00,0:15:00,ECCS,112CCSCI,2270,17,REC,TA,TH,15:30:00,16:45:00,ECCS,112CCSCI,2270,18,REC,TA,TH,17:00:00,18:15:00,ECCS,112CCSCI,2270,19,REC,TA,TH,18:30:00,19:45:00,ECCS,112CCSCI,2270,20,REC,TA,TH,20:00:00,21:15:00,ECCS,112CCSCI,2270,21,REC,TA,TH,21:30:00,22:45:00,ECCS,112CCSCI,2270,22,REC,TA,TH,23:00:00,0:15:00,ECCS,112CCSCI,2400,10,Computer Systems,Han,T/TH,18:30:00,19:45:00,ECCR,265CSCI,2400,11,REC,TA,M,15:00:00,15:50:00,ECCS,112CCSCI,2400,12,REC,TA,M,16:00:00,16:50:00,ECCS,112CCSCI,2400,13,REC,TA,M,17:00:00,17:50:00,ECCS,112CCSCI,2400,14,REC,TA,M,19:00:00,19:50:00,ECCS,112CCSCI,2400,15,REC,TA,M,20:00:00,20:50:00,ECCS,112CCSCI,2400,16,REC,TA,M,21:00:00,21:50:00,ECCS,112CCSCI,2820,1,Linear Algebra with Computer Science Applications,Jessup,M/W,22:00:00,23:15:00,,CSCI,2824,1,Discrete Structures,Eisenberg,M/W/F,19:00:00,19:50:00,MATH,100CSCI,3002,1,HCCFndtns/UserCntrdDesignDev1,Lewis,M/W/F,17:00:00,17:50:00,ITLL,1B50CSCI,3104,10,Algorithms,Lv,T/TH,17:00:00,18:15:00,,CSCI,3104,11,REC,TA,F,15:00:00,15:50:00,,CSCI,3104,12,REC,TA,F,16:00:00,16:50:00,,CSCI,3104,13,REC,TA,F,17:00:00,17:50:00,,CSCI,3104,14,REC,TA,F,19:00:00,19:50:00,,CSCI,3104,15,REC,TA,F,20:00:00,20:50:00,,CSCI,3112,801,HCC Professional Development,Lewis,TBA,,,,CSCI,3155,10,Principles of Programming Languages,Staff,T/TH,15:30:00,16:45:00,,CSCI,3155,11,REC,TA,W,15:00:00,15:50:00,,CSCI,3155,12,REC,TA,W,16:00:00,16:50:00,,CSCI,3155,13,REC,TA,W,17:00:00,17:50:00,,CSCI,3155,14,REC,TA,W,19:00:00,19:50:00,,CSCI,3202,1,Introduction to Artificial Intelligence,Hoenigman,M/W/F,15:00:00,15:50:00,MUEN,E0046CSCI,3287,2,Database and Information Systems (Combined with CSCI 7717-002),Staff,T/TH,21:30:00,22:45:00,,CSCI,3302,10,Introduction to Robotics,Correll,W,16:00:00,17:30:00,,CSCI,3302,11,Lab,Correll,F,4:00:00,6:30:00,ECCS,112CCSCI,3308,1,Software Engineering Methods and Tools,Boese,M/F,21:00:00,21:50:00,ECCR,265CSCI,3308,11,Lab,TA,W,15:00:00,16:50:00,ECCS,112CCSCI,3308,12,Lab,TA,W,5:00:00,6:50:00,ECCS,112CCSCI,3308,13,Lab,TA,W,19:00:00,20:50:00,ECCS,112CCSCI,3308,14,Lab,TA,W,21:00:00,22:50:00,ECCS,112CCSCI,3702,1,"Cognitive Science (Combined with LING3005, PHIL3310, PSYC3005)",Eisenberg,M/W/F,20:00:00,20:50:00,,CSCI,3753,10,Operating Systems,Staff,T/TH,18:30:00,19:45:00,ECEE,1B32CSCI,3753,11,REC,TA,M,15:00:00,15:50:00,,CSCI,3753,12,REC,TA,M,16:00:00,16:50:00,,CSCI,3753,13,REC,TA,M,17:00:00,17:50:00,,CSCI,4113,1,Unix System Administration (Combined with TLEN 5833-001),Dehus,T/TH,20:00:00,21:15:00,CAETE,CSCI,4123,10,Network Laboratory (Combined with TLEN 5460),Santos,M,19:30:00,22:30:00,,CSCI,4123,11,Network Lab (Combined with TLEN 5460),Santos,F,1:30:00,4:30:00,,CSCI,4229,1,Computer Graphics (Combined with CSCI 5229-001),SchreÃŒ_der,TH,23:00:00,1:30:00,ECCS,1B12CSCI,4273,1,Network Systems (Combined with CSCI 5273-001),Mishra,M/W,22:00:00,23:15:00,ECCS,1B12CSCI,4308,10,Software Engineering Project 1,Stafford,T,23:00:00,1:30:00,,CSCI,4308,11,Software Engineering Project 1 REC,TBA,TBA,,,,CSCI,4314,1,"Algorithms: Molecularbio (Combined with CSCI 4314-002, MCDB 4314, MCDB  5314) ",Goldberg,T/TH,18:30:00,19:45:00,,CSCI,4328,800,Software Project Management and Mentoring,Stafford,T,23:00:00,1:30:00,,CSCI,4328,801,Software Project Management and Mentoring REC,TBA,TBA,,,,CSCI,4338,10,Interdisciplinary Software Project Management,Stafford,T,23:00:00,1:30:00,,CSCI,4338,800,Interdisciplinary Software Project Management REC,TBA,TBA,,,,CSCI,4448,1,Object-Oriented Analysis and Design (Combined with CSCI 5448-001),Anderson,T/TH,18:30:00,19:45:00,ECCS,1B28CSCI,4576,10,High-Performance Scientific Computing 1 (Combined with CSCI 5576-010),Tufo,T/TH,15:30:00,16:45:00,,CSCI,4576,11,High Performance Scientific Computing 1 Lab (Combined with CSCI 5576-011),Tufo,W,22:00:00,23:50:00,,CSCI,4593,1,Computer Organization (Combined with ECEN 4593),ECEN Staff,M/W/F,18:00:00,18:50:00,,CSCI,4809,1,"Computer Animation (Combined with CSCI 5809, ATLS 4809, ATLS 5809)",King,T/TH,17:00:00,18:15:00,ATLS104,CSCI,4810,2,Seminar in Computational Biology (Combined with 6810-001),Goldberg,T,21:30:00,22:20:00,,CSCI,4830,1,Tpcs: Ethical Hacking (Combined with CSCI 7000-001),Black,M/W/F,16:00:00,16:50:00,ECCS,1B14CSCI,4830,2,Tpcs: HCC Big Data Computing (Combined with CSCI 7000-002),Yeh,M,22:00:00,0:30:00,,CSCI,4830,3,Tpcs: Datacenter Scale Computing (Combined with CSCI 7000-003),Grunwald,T/TH,18:30:00,19:45:00,ECCS,1B14CSCI,5135,1,Computer Aided Verification (Combined with ECEN 5139,Cerny,M/W,21:00:00,22:45:00,ECEE,265CSCI,5229,1,Computer Graphics (Combined with CSCI 4229-001),SchreÃŒ_der,TH,23:00:00,1:30:00,ECCS,1B12CSCI,5273,1,Network Systems (Combined with CSCI 4273-001 and ECEN 5023-001),Mishra,M/W,22:00:00,23:15:00,ECCS,1B12CSCI,5314,1,"Algorithms: Molecularbio (Combined with CSCI 4314-002, MCDB 4314, MCDB  5314) ",Goldberg,M/W,22:00:00,23:15:00,,CSCI,5352,1,Network Analysis and Modeling,Clauset,T/TH,18:30:00,19:45:00,ECCS,1B12CSCI,5448,1,Object-Oriented Analysis and Design (Combined with CSCI 4448-001),Anderson,T/TH,18:30:00,19:45:00,ECCS,1B28CSCI,5573,1,Advanced Operating Systems (Combined with ECEN 5573),Mishra,T/TH,20:00:00,21:15:00,,CSCI,5576,10,High-Performance Scientific Computing 1 (Combined with CSCI 4576-010),Tufo,T/TH,15:30:00,16:45:00,,CSCI,5576,11,High Performance Scientific Computing 1 Lab (Combined with CSCI 4576-011),,W,22:00:00,23:50:00,,CSCI,5606,1,Principles of Numerical Computation,Cai,T/TH,20:00:00,21:15:00,,CSCI,5608,1,Software Project Management,MacMillan,M,23:30:00,2:00:00,ECCS,1B14CSCI,5636,1,Numerical Solution of Partial Differential Equations,Cai,M/W,20:00:00,22:30:00,,CSCI,5646,1,Numerical Linear Algebra,Jessup,M/W,17:00:00,18:15:00,,CSCI,5809,1,"Computer Animation (Combined with CSCI 5809, ATLS 4809, ATLS 5809)",King,M/W,17:00:00,18:15:00,ATLS104,CSCI,5832,1,Natural Language Processing (Combined with LING 5832-001,Staff,T/TH,21:30:00,22:45:00,,CSCI,5839,1,User Centered Design,Lewis,T/TH,20:00:00,21:15:00,ECEE,1B32CSCI,5919,1,HCI: Survey and Synthesis 1,Palen,W,22:00:00,0:30:00,DLC,170CSCI,6000,1,Introduction to the Computer Science PhD Program,Lewis,M,22:00:00,22:50:00,,CSCI,6810,1,Seminar in Computational Biology (Combined with CSCI 4810-002),Goldberg,M,19:00:00,19:50:00,,CSCI,7000,1,Tpcs: Ethical Hacking (Combined with CSCI 4830-001),Black,M/W/F,16:00:00,16:50:00,ECCS,1B14CSCI,7000,2,Tpcs: HCC Big Data Computing (CSCI 4830-002),Yeh,M,22:00:00,0:30:00,,CSCI,7000,3,Tpcs: Datacenter Scale Computing (Combined with CSCI 4830-003),Grunwald,T/TH,18:30:00,19:45:00,ECCS,1B14CSCI,7000,4,Tpcs: Systems and Algorithms for Massive Data Applications,Lv,T/TH,18:30:00,19:45:00,,CSCI,7000,5,"Tpcs: Mdlng, Verifctn & Cntrl for Cybr-Phys Sys",Sankaranarayanan,T/TH,15:30:00,16:45:00,,CSCI,7000,6,Tpcs: To Be Determined,Tufo,,,,,CSCI,7135,1,Tpcs:  Program Analysis,Chang,M/W,22:00:00,23:15:00,,CSCI,7154,1,Tpcs:  Reading in Formal Methods - 1credit hr.,Sankaranarayanan,T,21:30:00,22:20:00,,CSCI,7222,1,Probabilistic Models of Human and Artificial Intelligence,Mozer,T/TH,20:00:00,21:15:00,,CSCI,7412,1,"Cog Sci Practicum 1 (Combined with EDUC 6506, LING 7415, PHIL 7415, PSYC  7415) ",Sumner,M,18:00:00,20:00:00,,CSCI,7422,1,"Cog Sci Practicum 2 (Combined with EDUC 6516, LING 7425, PHIL 7425, PSYC  7425) ",Sumner,M,18:00:00,22:00:00,,CSCI,7717,2,Tpcs: Database Sys (Combined with CSCI 3287-002),Staff,,,,,CSCI,7772,1,Tpcs in Cognitive Science,Sumner,T/TH,21:30:00,22:45:00,,TLEN,5833,1,Unix System Admin (Combined with CSCI 4113-001),Dehus,T/TH,20:00:00,21:15:00,CAETE,
