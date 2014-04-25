@@ -10,7 +10,7 @@ require 'csv'
 
 # FasterCSV.foreach("RAILS.root/Schedules.csv") do |row|
 
-CSV.foreach("Schedules_Fall2014.csv") do |row|
+CSV.foreach("Schedules.csv") do |row|
 	Course.create!(
 	:subject_area => row[0],
 	:course_number => row[1],
