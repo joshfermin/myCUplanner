@@ -13,18 +13,7 @@
   <%end%>
 </ul>
 <br/>
-  <h3>
-  <%= collection_select(:course, :subject_id, Course.all, :id, :subject_area, :prompt => "---- Choose Subject ----")%>&nbsp;
-  <%= collection_select(:course, :instructor, Course.all, :id, :instructor, :prompt => "---- Choose Instructor ----")%>&nbsp;
-  <%= f.label :maximum_students_mod, "Limit Modification" %>
-  <%= f.text_field :maximum_students_mod%> &nbsp;
-  <%= f.label :available, "Available" %>
-  <%= f.select :available, [["Yes",1], ["No",0]], :include_blank => true  %>
-  <br/><br/>
-  <%= f.label :name, "Course Name (disabled)" %><br/>
-  <%= f.text_field :name, :size => 26, :disabled => true%> &nbsp;
-  </h3>
-<br/>
+
   <%= f.submit "Submit", :confirm => "Confirm the changes?" %>
   <%= link_to 'Cancel', courses_path, :method => :get ,
   :confirm => "Cancel all changes and go back to courses page?",
