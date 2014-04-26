@@ -28,6 +28,19 @@ class CoursesController < ApplicationController
     @courses = Course.find(params[:course_ids])
   end
 
+  def select_courses_taken
+    @ordered_by = params[:order_by] if params.has_key? 'order_by'
+    if @ordered_by
+      @courses = Course.all(:order => "#{@ordered_by} asc")
+    else
+      @courses = Course.all
+    end
+  end
+
+  def send_to_index
+    redirect_to url_for(:controller => 'courses', :action => 'index')
+  end
+
   def send_to_calendar
 
     @courses = Course.find(params[:course_ids])

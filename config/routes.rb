@@ -20,8 +20,11 @@ MyCUplanner::Application.routes.draw do
       put 'update_multiple'
       post 'delete_multiple'
       post 'send_to_calendar'
+      post 'send_to_index'
     end
   end
+
+  match '/select_courses_taken', to: 'courses#select_courses_taken', via:'get'
 
   # static pages routes
   root :to => 'users#home'

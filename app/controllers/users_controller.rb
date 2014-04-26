@@ -16,8 +16,9 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       sign_in @user
-      flash[:success] = "Welcome to myCUplanner" # flash notice that tells the user that the sign up was successful
-      redirect_to @user
+      flash[:success] = "Welcome to myCUplanner, please select your courses taken" # flash notice that tells the user that the sign up was successful
+      #redirect_to @user
+      redirect_to url_for(:controller => 'courses', :action => 'select_courses_taken')
     else
       render 'new'
     end
