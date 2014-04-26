@@ -26,6 +26,12 @@ class CoursesController < ApplicationController
   # add our two new actions.
   def select_multiple
     @courses = Course.find(params[:course_ids])
+    @start_time = Array.new
+    @end_time = Array.new
+    for course in @courses
+      @start_time << course.start_time
+      @end_time << course.end_time
+    end
   end
   
   # The update_multiple action starts by getting the array of course ids that we passed 
