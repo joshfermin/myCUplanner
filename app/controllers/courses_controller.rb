@@ -4,7 +4,15 @@ class CoursesController < ApplicationController
   # GET /courses
   # GET /courses.json
   def index
-    @courses = Course.all
+    @ordered_by = params[:order_by] if params.has_key? 'order_by'
+    if @ordered_by
+      @courses = Course.all(:order => "#{@ordered_by} asc")
+    else
+      @courses = Course.all
+    end
+
+
+
   end
 
   # GET /courses/1
