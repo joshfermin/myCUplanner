@@ -33,15 +33,20 @@ class CoursesController < ApplicationController
     @courses = Course.find(params[:course_ids])
     @start_time = Array.new
     @end_time = Array.new
+    @title = Array.new
+
     for course in @courses
+      @title << course.course_title
       @start_time << course.start_time
       @end_time << course.end_time
+      @day << course.day
     end
 
+      @event = current_user.events.build(:title => 'test', :starts_at => '2014-04-25 18:38:00.000000', :ends_at => '2014-04-25 18:38:00.000000', :all_day => false, :description => '')
+      @event.save
 
-
-    raise
     redirect_to url_for(:controller => 'events', :action => 'create')
+
   end
   
   # The update_multiple action starts by getting the array of course ids that we passed 
