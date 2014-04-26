@@ -26,6 +26,8 @@ class CoursesController < ApplicationController
   # add our two new actions.
   def select_multiple
     @courses = Course.find(params[:course_ids])
+
+    #redirect_to url_for(:controller => 'events', :action => 'create', @courses.start_time => :starts_at, @courses.end_time => :ends_at)
   end
   
   # The update_multiple action starts by getting the array of course ids that we passed 
