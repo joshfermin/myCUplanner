@@ -11,12 +11,12 @@ MyCUplanner::Application.routes.draw do
 
   # The :collection option takes a hash of values. Each key is the name of an action and each value 
   # is the method that that action should use. As mentioned earlier we’re using POST 
-  # for the select_multiple action, even though ideally we should use GET.
-  # resources :courses, :collection => { :select_multiple => :post, :update_multiple => :put }
+  # for the selected_courses action, even though ideally we should use GET.
+  # resources :courses, :collection => { :selected_courses => :post, :update_multiple => :put }
 
   resources :courses do
     collection do
-      post 'select_multiple'
+      post 'selected_courses'
       put 'update_multiple'
       post 'delete_multiple'
       post 'send_to_calendar'
