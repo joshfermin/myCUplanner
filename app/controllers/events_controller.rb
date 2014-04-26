@@ -42,7 +42,7 @@ class EventsController < ApplicationController
   # end
 
   def new
-    @event = Course.find(params[:course_ids])
+    @event = Event.new
 
     respond_to do |format|
       format.html # new.html.erb
