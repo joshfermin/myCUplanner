@@ -7,8 +7,8 @@ class CreateCourses < ActiveRecord::Migration
       t.string :course_title
       t.string :instructor
       t.string :day
-      t.string :start_time
-      t.string :end_time
+      t.datetime :start_time
+      t.datetime :end_time
       t.string :building
       t.string :room
 

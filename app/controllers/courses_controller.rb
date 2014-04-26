@@ -4,7 +4,12 @@ class CoursesController < ApplicationController
   # GET /courses
   # GET /courses.json
   def index
-    @courses = Course.all
+    @ordered_by = params[:order_by] if params.has_key? 'order_by'
+    if @ordered_by
+      @courses = Course.all(:order => "#{@ordered_by} asc")
+    else
+      @courses = Course.all
+    end
   end
 
   # GET /courses/1
@@ -13,13 +18,13 @@ class CoursesController < ApplicationController
   end
 
   # These two actions will behave like the standard edit and update actions 
-  # but will handle multiple records. The edit_multiple action will need a view.
+  # but will handle multiple records. The select_multiple action will need a view.
 
   # In our application Courses is a RESTful resource so the two new actions won’t 
   # be accessible without making a change to our routes file. As we’re adding methods 
   # that will work on a collection of courses we’ll use the :collection option to 
   # add our two new actions.
-  def edit_multiple
+  def select_multiple
     @courses = Course.find(params[:course_ids])
   end
   
