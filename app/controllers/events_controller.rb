@@ -58,7 +58,7 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create
-    #if select_multiple_course_path
+    #if selected_courses_course_path
     #  @event = current_user.events.build(params.require(:event).permit(:title, :starts_at, :ends_at,
     #                                                                   :all_day, :description))
     #end
