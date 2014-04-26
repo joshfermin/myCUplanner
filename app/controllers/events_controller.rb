@@ -5,8 +5,14 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
+    @ordered_by = params[:order_by] if params.has_key? 'order_by'
     @user = current_user.id
-    @events = Event.where(['user_id =  ?', @user])
+    if @ordered_by
+      @events = Event.where(['user_id =  ?', @user]).("#{@ordered_by} asc")
+    else
+      @events = Event.where(['user_id =  ?', @user])
+    end
+
     #@events = Event.between(params['start'], params['end']) if (params['start'] && params['end'])
     respond_to do |format|
       format.html # index.html.erb
