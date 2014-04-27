@@ -41,6 +41,7 @@ class CoursesController < ApplicationController
     redirect_to url_for(:controller => 'courses', :action => 'index')
   end
 
+
   def send_to_calendar
 
     @courses = Course.find(params[:course_ids])
@@ -52,7 +53,7 @@ class CoursesController < ApplicationController
     @building = Array.new
     @room_number = Array.new
 
-    for course in @courses
+    for course in @courses do
       if course.course_title != nil
         @title << course.course_title
       else
@@ -73,8 +74,7 @@ class CoursesController < ApplicationController
 
       if course.day != nil
         @day << course.day
-      else
-        @day << ' '
+        debugger
       end
 
       if course.instructor != nil
@@ -96,11 +96,35 @@ class CoursesController < ApplicationController
       end
     end
 
+    require 'chronic'
+
+
 
     limit = @title.length
     limit.times do |count|
-      @event = current_user.events.build(:title => @title[count], :starts_at => @start_time[count], :ends_at => @end_time[count], :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count])
-      @event.save
+      @start = @start_time[count].strftime('%T')
+      @end = @end_time[count].strftime('%T')
+
+      Time.zone = "UTC"
+      Chronic.time_class = Time.zone
+
+      if @day[count] == "M" #or 'T' or 'TH' or 'W' or 'F'
+
+        @replace_start = Chronic.parse("monday at " + @start)
+        @replace_end =  Chronic.parse("monday at " + @end)
+
+        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start, :ends_at => @replace_end, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count])
+        @event.save
+
+      elsif @day[count] == "T"
+
+      else
+        @event = current_user.events.build(:title => @title[count], :starts_at => @start_time[count], :ends_at => @end_time[count], :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count])
+        @event.save
+      end
+
+      #@event = current_user.events.build(:title => @title[count], :starts_at => @start_time[count], :ends_at => @end_time[count], :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count])
+      #@event.save
     end
 
 
