@@ -4,12 +4,11 @@
       <%= link_to image_tag('myCUplannerLogo.png', size:"150x250"), root_path, id: "logo" %>
       <nav>
         <ul class="nav pull-right">
-          <li><%= link_to "Home", root_path %></li>
+
           <% if signed_in? %>
-          <li><%= link_to "Courses", "/courses" %></li>
-          <% if signed_in? %>
-          <% end %>
-          <li><%= link_to "Calendar", "/calendar" %></li>
+              <li><%= link_to "Profile", controller: "users", action: "show", id: current_user.id %></li>
+              <li><%= link_to "Courses", "/courses" %></li>
+              <li><%= link_to "Calendar", "/calendar" %></li>
           <% end %>
           <% if signed_in? %>
               <li id="fat-menu" class="dropdown">
@@ -19,6 +18,7 @@
                 <ul class="dropdown-menu">
                   <li><%= link_to "Schedule", '/events' %></li>
                   <li><%= link_to "Courses", "/courses" %></li>
+                  <li><%= link_to "About", root_path %></li>
                   <li><%= link_to "Edit Classes", '#' %></li>
 
                   <li class="divider"></li>
