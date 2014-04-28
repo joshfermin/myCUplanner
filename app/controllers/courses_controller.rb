@@ -103,84 +103,61 @@ class CoursesController < ApplicationController
       @start = @start_time[count].strftime('%T')
       @end = @end_time[count].strftime('%T')
 
-      @replace_start_m = Chronic.parse("monday at " + @start)
-      @replace_end_m =  Chronic.parse("monday at " + @end)
+      @replace_start_m = Chronic.parse("this week monday at " + @start)
+      @replace_end_m =  Chronic.parse("this week monday at " + @end)
 
-      @replace_start_w = Chronic.parse("wednesday at " + @start)
-      @replace_end_w =  Chronic.parse("wednesday at " + @end)
+      @replace_start_t = Chronic.parse("this week tuesday at " + @start)
+      @replace_end_t =  Chronic.parse("this week tuesday at " + @end)
 
-      @replace_start_f = Chronic.parse("friday at " + @start)
-      @replace_end_f =  Chronic.parse("friday at " + @end)
+      @replace_start_w = Chronic.parse("this week wednesday at " + @start)
+      @replace_end_w =  Chronic.parse("this week wednesday at " + @end)
+
+      @replace_start_th = Chronic.parse("this week thursday at " + @start)
+      @replace_end_th =  Chronic.parse("this week thursday at " + @end)
+
+      @replace_start_f = Chronic.parse("this week friday at " + @start)
+      @replace_end_f =  Chronic.parse("this week friday at " + @end)
+
 
 
       Time.zone = "UTC"
       Chronic.time_class = Time.zone
 
       if @day[count] == "M" #or 'T' or 'TH' or 'W' or 'F'
-        @replace_start = Chronic.parse("monday at " + @start)
-        @replace_end =  Chronic.parse("monday at " + @end)
-
-        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start, :ends_at => @replace_end, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count])
+        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_m, :ends_at => @replace_end_m, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count])
         @event.save
 
       elsif @day[count] == "T"
-        @replace_start = Chronic.parse("tuesday at " + @start)
-        @replace_end =  Chronic.parse("tuesday at " + @end)
-
-        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start, :ends_at => @replace_end, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count])
+        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_t, :ends_at => @replace_end_t, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count])
         @event.save
 
       elsif @day[count] == "TH"
-        @replace_start = Chronic.parse("thursday at " + @start)
-        @replace_end =  Chronic.parse("thursday at " + @end)
-
-        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start, :ends_at => @replace_end, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count])
+        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_th, :ends_at => @replace_end_th, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count])
         @event.save
 
       elsif @day[count] == "W"
-        @replace_start = Chronic.parse("wednesday at " + @start)
-        @replace_end =  Chronic.parse("wednesday at " + @end)
-
-        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start, :ends_at => @replace_end, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count])
+        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_w, :ends_at => @replace_end_w, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count])
         @event.save
 
       elsif @day[count] == "F"
-        @replace_start = Chronic.parse("monday at " + @start)
-        @replace_end =  Chronic.parse("monday at " + @end)
-
-        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start, :ends_at => @replace_end, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count])
+        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_f, :ends_at => @replace_end_f, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count])
         @event.save
 
       elsif @day[count] == "M/W/F"
-
-
         @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_m, :ends_at => @replace_end_m, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count])
         @event.save
         @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_w, :ends_at => @replace_end_w, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count])
         @event.save
-
         @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_f, :ends_at => @replace_end_f, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count])
         @event.save
 
       elsif @day[count] == "M/W"
-        @replace_start_m = Chronic.parse("monday at " + @start)
-        @replace_end_m =  Chronic.parse("monday at " + @end)
-
-        @replace_start_w = Chronic.parse("wednesday at " + @start)
-        @replace_end_w =  Chronic.parse("wednesday at " + @end)
-
         @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_m, :ends_at => @replace_end_m, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count])
         @event.save
         @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_w, :ends_at => @replace_end_w, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count])
         @event.save
 
       elsif @day[count] == "T/TH"
-        @replace_start_t = Chronic.parse("tuesday at " + @start)
-        @replace_end_t =  Chronic.parse("tuesday at " + @end)
-
-        @replace_start_th = Chronic.parse("thursday at " + @start)
-        @replace_end_th =  Chronic.parse("thursday at " + @end)
-
         @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_t, :ends_at => @replace_end_t, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count])
         @event.save
         @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_th, :ends_at => @replace_end_th, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count])

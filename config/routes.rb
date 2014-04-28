@@ -26,6 +26,7 @@ MyCUplanner::Application.routes.draw do
 
   match '/select_courses_taken', to: 'courses#select_courses_taken', via:'get'
 
+
   # static pages routes
   root :to => 'users#home'
   match '/about',   to: 'dynamic_pages#about',   via: 'get'
