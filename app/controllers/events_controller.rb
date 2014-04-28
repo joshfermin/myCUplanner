@@ -8,9 +8,9 @@ class EventsController < ApplicationController
     @ordered_by = params[:order_by] if params.has_key? 'order_by'
     @user = current_user.id
     if @ordered_by
-      @events = Event.where(['user_id =  ?', @user]).("#{@ordered_by} asc")
+      @events = Event.where(['user_id =  ?', @user]).("#{@ordered_by} asc").uniq
     else
-      @events = Event.where(['user_id =  ?', @user])
+      @events = Event.where(['user_id =  ?', @user]).uniq
     end
 
     #@events = Event.between(params['start'], params['end']) if (params['start'] && params['end'])

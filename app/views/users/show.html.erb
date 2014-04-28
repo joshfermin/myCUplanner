@@ -1,13 +1,5 @@
 <% provide(:title, @user.name) %>
   <div class="row">
-  .
-  .
-  .
-    <aside>
-      .
-      .
-      .
-    </aside>
     <div class="span8">
       <% if @user.courses.any? %>
         <h3>Courses (<%= @user.courses.count %>)</h3>
@@ -27,5 +19,3 @@
     </section>
     </div>
 </div>
-
-<%= debug @user %>

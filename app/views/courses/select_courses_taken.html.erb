@@ -10,14 +10,7 @@
         <th></th>
         <th><%= link_to 'Subject Area', courses_path(create_order_params 'subject_area'), id: 'subject_area_header' %></th>
         <th><%= link_to 'Course Number', courses_path(create_order_params 'course_number'), id: 'course_number_header' %></th>
-        <th><%= link_to 'Extension Number', courses_path(create_order_params 'ext_number'), id: 'ext_number_header' %></th>
         <th><%= link_to 'Course Title', courses_path(create_order_params 'course_title'), id: 'course_title' %></th>
-        <th><%= link_to 'Instructor', courses_path(create_order_params 'instructor'), id: 'instructor_header' %></th>
-        <th><%= link_to 'Day', courses_path(create_order_params 'day'), id: 'day_header' %></th>
-        <th><%= link_to 'Start Time', courses_path(create_order_params 'start_time'), id: 'start_time_header' %></th>
-        <th><%= link_to 'End Time', courses_path(create_order_params 'end_time'), id: 'end_time_header' %></th>
-        <th><%= link_to 'Building', courses_path(create_order_params 'building'), id: 'building_header' %></th>
-        <th><%= link_to 'Room', courses_path(create_order_params 'room'), id: 'room_header' %></th>
       </tr>
       </thead>
 
@@ -27,21 +20,7 @@
             <td><%= check_box_tag "course_ids[]", course.id %></td>
             <td><%= course.subject_area %></td>
             <td><%= course.course_number %></td>
-            <td><%= course.ext_number %></td>
             <td><%= course.course_title %></td>
-            <td><%= course.instructor %></td>
-            <td><%= course.day %></td>
-            <td><%=if course.start_time != nil
-                     course.start_time.localtime.strftime('%H:%M %Z')
-                   end
-            %></td>
-            <td><%= if course.end_time != nil
-                      course.end_time.localtime.strftime('%H:%M %Z')
-                    end
-            %></td>
-            <td><%= course.building %></td>
-            <td><%= course.room %></td>
-            <td><%= link_to 'Show', course %></td>
             <!--<td><#%= link_to 'Edit', edit_course_path(course) %></td>-->
             <!--<td><#%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
           </tr>
