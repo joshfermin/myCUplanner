@@ -8,9 +8,9 @@ class EventsController < ApplicationController
     @ordered_by = params[:order_by] if params.has_key? 'order_by'
     @user = current_user.id
     if @ordered_by
-      @events = Event.where(['user_id =  ?', @user]).("#{@ordered_by} asc").uniq
+      @events = Event.where(['user_id =  ?', @user]).("#{@ordered_by} asc")
     else
-      @events = Event.where(['user_id =  ?', @user]).uniq
+      @events = Event.where(['user_id =  ?', @user])
     end
 
     #@events = Event.between(params['start'], params['end']) if (params['start'] && params['end'])
@@ -96,7 +96,20 @@ class EventsController < ApplicationController
   # DELETE /events/1.json
   def destroy
     @event = Event.find(params[:id])
-    @event.destroy
+    @title = @event.title
+    @description = @event.description
+
+    if @description.include? "Instructor"
+      @event = Event.where(['title = ?', @title])
+      @event.each do |id|
+        @event.find(id).destroy
+      end
+      flash[:success] = "Class Deleted"
+    else
+      flash[:success] = "Event Deleted"
+      @event.destroy
+    end
+
 
     respond_to do |format|
       format.html { redirect_to events_url }
