@@ -39,6 +39,16 @@ class CoursesController < ApplicationController
 
   def send_to_index
     @courses = Course.find(params[:course_taken_ids])
+    @add_to_user = Array.new
+    for course in @courses
+       @add_to_user << course.id
+    end
+
+    @user = current_user
+    @user.courses_taken = @add_to_user
+    @user.save!(validate:false)
+
+
     redirect_to url_for(:controller => 'users', :action => 'show', id: current_user.id)
   end
 
