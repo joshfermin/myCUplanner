@@ -30,7 +30,7 @@ class UsersController < ApplicationController
       @course_ids = @user.courses_taken
 
       if @course_ids == nil
-        @courses_taken = Course.find(2)
+        @courses_taken = Course.find([2,3])
         # implement something here for freshman who havent had classes yet
       else
         @courses_taken = Course.find(@course_ids)
@@ -42,12 +42,13 @@ class UsersController < ApplicationController
          @course_event_ids << events.course_id
       end
 
-      @course_event_ids.compact!.uniq!
 
-      if @course_event_ids == nil
-        @courses_for_next_semester = Course.find(2)
+
+      if @course_event_ids.empty?
+        @courses_for_next_semester = Course.find([2,3])
         # this is a hack
       else
+        @course_event_ids.compact!.uniq!
         @courses_for_next_semester = Course.find(@course_ids)
       end
     end
