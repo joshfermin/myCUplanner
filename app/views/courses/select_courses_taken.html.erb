@@ -8,9 +8,9 @@
       <thead>
       <tr>
         <th></th>
-        <th><%= link_to 'Subject Area', courses_path(create_order_params 'subject_area'), id: 'subject_area_header' %></th>
-        <th><%= link_to 'Course Number', courses_path(create_order_params 'course_number'), id: 'course_number_header' %></th>
-        <th><%= link_to 'Course Title', courses_path(create_order_params 'course_title'), id: 'course_title' %></th>
+        <th>Subject Area</th>
+        <th>Course Number</th>
+        <th>Course Title</th>
       </tr>
       </thead>
 
@@ -29,6 +29,6 @@
       </tbody>
     </table>
 
-    <%= submit_tag "Next", class: "btn btn-large btn-primary" %>
+    <%= submit_tag "Confirm", class: "btn btn-large btn-primary" %>
 <% end %>
 <br>

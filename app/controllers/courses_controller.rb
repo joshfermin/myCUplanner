@@ -4,11 +4,19 @@ class CoursesController < ApplicationController
   # GET /courses
   # GET /courses.json
   def index
+    @user = current_user
+    @course_ids = @user.courses_taken
+
+    @courses = Course.all
+
+
+    @courses_taken = Course.find(@course_ids)
     @ordered_by = params[:order_by] if params.has_key? 'order_by'
     if @ordered_by
-      @courses = Course.all(:order => "#{@ordered_by} asc")
+      @courses = @courses.where.not(id: @course_ids)
+      @courses = @courses.all(:order => "#{@ordered_by} asc")
     else
-      @courses = Course.all
+      @courses = @courses.where.not(id: @course_ids)
     end
   end
 
@@ -91,19 +99,19 @@ class CoursesController < ApplicationController
       if course.instructor != nil
         @instructor << course.instructor
       else
-        @instructor << ' '
+        @instructor << 'TBA'
       end
 
       if course.building != nil
         @building << course.building
       else
-        @building << ' '
+        @building << 'TBA'
       end
 
       if course.room != nil
         @room_number << course.room
       else
-        @room_number << ' '
+        @room_number << 'TBA'
       end
     end
 
@@ -185,7 +193,7 @@ class CoursesController < ApplicationController
 
 
     redirect_to url_for(:controller => 'events', :action => 'create')
-
+    flash[:success] = "Courses successfully added to calendar"
   end
   
   # The update_multiple action starts by getting the array of course ids that we passed 
@@ -196,15 +204,7 @@ class CoursesController < ApplicationController
   # as we don’t have any validations on our model. If this was a production application we’d 
   # have validations but that’s beyond the scope of this episode. Using update_attributes! 
   # this way will mean that an exception is thrown if something is invalid. Once all of the 
-  # courses have been updated we set a flash message and return back to the courses listing page.  
-  # def update_multiple
-  #   @courses = Course.find(params[:course_ids])
-  #   @courses.each do |course|
-  #     course.update_attributes!(params[:course].reject { |k,v| v.blank? })
-  #   end
-  #   flash[:notice] = "Updated selected courses!"
-  #   redirect_to courses_path
-  # end
+  # courses have been updated we set a flash message and return back to the courses listing page.
   def update_multiple
     @courses = Course.find(params[:course_ids])
     # @courses.each do |course|

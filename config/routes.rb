@@ -28,6 +28,7 @@ MyCUplanner::Application.routes.draw do
 
 
   # static pages routes
+
   root :to => 'users#home'
   match '/about',   to: 'dynamic_pages#about',   via: 'get'
   match '/contact', to: 'dynamic_pages#contact', via: 'get'

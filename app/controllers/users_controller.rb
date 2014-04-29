@@ -28,7 +28,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @course_ids = @user.courses_taken
 
-    @courses = Course.find(@course_ids)
+    @courses_taken = Course.find(@course_ids)
   end
 
   private

@@ -3,9 +3,9 @@
 
         <div class="center hero-unit">
         <section>
-          <h3>
+          <h2>
             <%= @user.name %>
-          </h3>
+          </h2>
 
           <p>Email: <%= @user.email %></p>
           <p></p>
@@ -25,7 +25,7 @@
 
           <tbody>
 
-          <% @courses.each do |course| %>
+          <% @courses_taken.each do |course| %>
               <tr>
                 <td><%= course.subject_area %></td>
                 <td><%= course.course_number %></td>
@@ -41,16 +41,15 @@
 
     <div class="hero-unit">
     <div class="container marketing">
-
       <!-- Three columns of text below the carousel -->
       <div class="row">
+      <div class="span4">
+        <%=link_to image_tag("classroom.png"), '/courses' %>
+        <h2>Courses</h2>
+      </div><!-- /.span4 -->
         <div class="span4">
           <%=link_to image_tag("calendar.png"), '/calendar'  %>
           <h2>Calendar</h2>
-        </div><!-- /.span4 -->
-        <div class="span4">
-          <%=link_to image_tag("classroom.png"), '/courses' %>
-          <h2>Courses</h2>
         </div><!-- /.span4 -->
         <div class="span4">
           <%=link_to image_tag("schedule.jpg", class: "img-circle"), '/events'  %>
