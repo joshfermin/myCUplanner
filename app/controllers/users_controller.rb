@@ -29,21 +29,27 @@ class UsersController < ApplicationController
       @user = current_user
       @course_ids = @user.courses_taken
 
-      if @course_ids = nil
-
+      if @course_ids == nil
+        @courses_taken = Course.find(2)
+        # implement something here for freshman who havent had classes yet
       else
         @courses_taken = Course.find(@course_ids)
       end
 
-
       @user_events = Event.where(:user_id => @user.id)
-      @course_ids = Array.new
+      @course_event_ids = Array.new
       for events in @user_events
-         @course_ids << events.course_id
+         @course_event_ids << events.course_id
       end
 
-      @course_ids.compact!.uniq!
-      @courses_for_next_semester = Course.find(@course_ids)
+      @course_event_ids.compact!.uniq!
+
+      if @course_event_ids == nil
+        @courses_for_next_semester = Course.find(2)
+        # this is a hack
+      else
+        @courses_for_next_semester = Course.find(@course_ids)
+      end
     end
   end
 
