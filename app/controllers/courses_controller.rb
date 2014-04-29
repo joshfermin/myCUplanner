@@ -38,7 +38,8 @@ class CoursesController < ApplicationController
   end
 
   def send_to_index
-    redirect_to url_for(:controller => 'courses', :action => 'index')
+    @courses = Course.find(params[:course_taken_ids])
+    redirect_to url_for(:controller => 'users', :action => 'show', id: current_user.id)
   end
 
 

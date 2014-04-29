@@ -15,9 +15,10 @@
       </thead>
 
       <tbody>
+
       <% @courses.each do |course| %>
           <tr>
-            <td><%= check_box_tag "course_ids[]", course.id %></td>
+            <td><%= check_box_tag "course_taken_ids[]", course.id %></td>
             <td><%= course.subject_area %></td>
             <td><%= course.course_number %></td>
             <td><%= course.course_title %></td>
