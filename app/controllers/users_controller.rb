@@ -44,12 +44,12 @@ class UsersController < ApplicationController
 
 
 
-      if @course_event_ids.empty?
+      if @course_event_ids.empty? or @course_event_ids == nil
         @courses_for_next_semester = Course.find([2,3])
         # this is a hack
       else
-        @course_event_ids.compact!.uniq!
-        @courses_for_next_semester = Course.find(@course_ids)
+        #@course_event_ids.compact!.uniq!
+        #@courses_for_next_semester = Course.find(@course_ids)
       end
     end
   end
