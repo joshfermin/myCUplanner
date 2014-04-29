@@ -28,7 +28,13 @@ class UsersController < ApplicationController
     if signed_in?
       @user = current_user
       @course_ids = @user.courses_taken
-      @courses_taken = Course.find(@course_ids)
+
+      if @course_ids = nil
+
+      else
+        @courses_taken = Course.find(@course_ids)
+      end
+
 
       @user_events = Event.where(:user_id => @user.id)
       @course_ids = Array.new
