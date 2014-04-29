@@ -58,7 +58,7 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create
-    #if select_multiple_course_path
+    #if selected_courses_course_path
     #  @event = current_user.events.build(params.require(:event).permit(:title, :starts_at, :ends_at,
     #                                                                   :all_day, :description))
     #end
@@ -96,7 +96,20 @@ class EventsController < ApplicationController
   # DELETE /events/1.json
   def destroy
     @event = Event.find(params[:id])
-    @event.destroy
+    @title = @event.title
+    @description = @event.description
+
+    if @description.include? "Instructor"
+      @event = Event.where(['title = ?', @title])
+      @event.each do |id|
+        @event.find(id).destroy
+      end
+      flash[:success] = "Class Deleted"
+    else
+      flash[:success] = "Event Deleted"
+      @event.destroy
+    end
+
 
     respond_to do |format|
       format.html { redirect_to events_url }

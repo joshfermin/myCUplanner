@@ -1,0 +1,34 @@
+<h1>Select Courses Taken</h1>
+
+<!-- At the top of this form we’ll put the opening form_tag. As the form isn’t going to be editing a particular course we’ll use a symbol rather than a variable that references a course. We’ll also need to specify a :url so that the form knows where to send its data and a :method so that PUT rather than POST is used. -->
+
+<!-- In the form we’ll need to pass through the ids of the courses that were passed to it,or they will be lost when the form is submitted and we won’t know which courses to update. We can pass the ids as a series of hidden fields and, as we’re doing that, also show a list of the courses that are being updated to the user. -->
+<%= form_tag send_to_index_courses_path do %>
+    <table class = "table table-striped">
+      <thead>
+      <tr>
+        <th></th>
+        <th>Subject Area</th>
+        <th>Course Number</th>
+        <th>Course Title</th>
+      </tr>
+      </thead>
+
+      <tbody>
+
+      <% @courses.each do |course| %>
+          <tr>
+            <td><%= check_box_tag "course_taken_ids[]", course.id %></td>
+            <td><%= course.subject_area %></td>
+            <td><%= course.course_number %></td>
+            <td><%= course.course_title %></td>
+            <!--<td><#%= link_to 'Edit', edit_course_path(course) %></td>-->
+            <!--<td><#%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+    <%= submit_tag "Confirm", class: "btn btn-large btn-primary" %>
+<% end %>
+<br>

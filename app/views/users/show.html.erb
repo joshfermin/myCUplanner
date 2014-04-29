@@ -1,31 +1,102 @@
-<% provide(:title, @user.name) %>
-  <div class="row">
-  .
-  .
-  .
-    <aside>
-      .
-      .
-      .
-    </aside>
-    <div class="span8">
-      <% if @user.courses.any? %>
-        <h3>Courses (<%= @user.courses.count %>)</h3>
-        <ol class="courses">
-          <%= render @courses %>
-        </ol>
-        <%= will_paginate @courses %>
-      <% end %>
-    </div>
-  </div>
-<div class="row">
-    <div class="hero-unit">
-    <section>
-      <h1>
-        <%= @user.name %>
-      </h1>
-    </section>
-    </div>
-</div>
+<% if signed_in? %>
+    <% provide(:title, @user.name) %>
 
-<%= debug @user %>
+        <div class="center hero-unit">
+        <section>
+          <h2>
+            <%= @user.name %>
+          </h2>
+
+          <p>Email: <%= @user.email %></p>
+          <p></p>
+        </section>
+        </div>
+
+    <% if @courses_taken == nil %>
+
+    <% else %>
+    <div class = "container marketing">
+    <h3>Courses Taken</h3>
+        <table class = "table table-striped">
+          <thead>
+          <tr>
+            <th>Subject Area</th>
+            <th>Course Number</th>
+            <th>Course Title</th>
+            <th></th>
+          </tr>
+          </thead>
+
+          <tbody>
+
+          <% @courses_taken.each do |course| %>
+              <tr>
+                <td><%= course.subject_area %></td>
+                <td><%= course.course_number %></td>
+                <td><%= course.course_title %></td>
+                <td><%= link_to 'Show', course %></td>
+                <!--<td><#%= link_to 'Edit', edit_course_path(course) %></td>-->
+                <!--<td><#%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+              </tr>
+          <% end %>
+          </tbody>
+        </table>
+    <br>
+    </div>
+    <% end %>
+
+    <% if @course_event_ids.empty? %>
+
+    <% else %>
+        <div class = "container marketing">
+          <h3>Next Semester Plan</h3>
+          <table class = "table table-striped">
+            <thead>
+            <tr>
+              <th>Subject Area</th>
+              <th>Course Number</th>
+              <th>Course Title</th>
+              <th></th>
+            </tr>
+            </thead>
+
+            <tbody>
+
+            <% @courses_for_next_semester.each do |course| %>
+                <tr>
+                  <td><%= course.subject_area %></td>
+                  <td><%= course.course_number %></td>
+                  <td><%= course.course_title %></td>
+                  <td><%= link_to 'Show', course %></td>
+                  <!--<td><#%= link_to 'Edit', edit_course_path(course) %></td>-->
+                  <!--<td><#%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+                </tr>
+            <% end %>
+            </tbody>
+          </table>
+          <br>
+        </div>
+    <% end %>
+
+    <div class="hero-unit">
+    <div class="container marketing">
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+      <div class="span4">
+        <%=link_to image_tag("classroom.png"), '/courses' %>
+        <h2>Courses</h2>
+      </div><!-- /.span4 -->
+        <div class="span4">
+          <%=link_to image_tag("calendar.png"), '/calendar'  %>
+          <h2>Calendar</h2>
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <%=link_to image_tag("schedule.jpg", class: "img-circle"), '/events'  %>
+          <h2>Schedule</h2>
+        </div><!-- /.span4 -->
+      </div><!-- /.row -->
+    </div>
+    </div>
+
+
+<% end %>
