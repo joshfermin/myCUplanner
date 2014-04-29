@@ -6,32 +6,36 @@ class CoursesController < ApplicationController
   def index
     @user = current_user
     @course_ids = @user.courses_taken
-
     @courses = Course.all
-    @courses_taken = Course.find(@course_ids)
-    @ordered_by = params[:order_by] if params.has_key? 'order_by'
+    if @course_ids != nil
+      @courses_taken = Course.find(@course_ids)
+      @ordered_by = params[:order_by] if params.has_key? 'order_by'
 
-    @course_taken_numbers = Array.new
-    for course in @courses_taken
-      @course_taken_numbers << course.course_number
-    end
+      @course_taken_numbers = Array.new
+      for course in @courses_taken
+        @course_taken_numbers << course.course_number
+      end
 
-    @courses = @courses.where.not(id: @course_ids)
-    @to_be_removed = @courses.where(:course_number => @course_taken_numbers)
-    @remove_ids = Array.new
+      @courses = @courses.where.not(id: @course_ids)
+      @to_be_removed = @courses.where(:course_number => @course_taken_numbers)
+      @remove_ids = Array.new
 
-    for course in @to_be_removed
-       @remove_ids << course.id
-    end
+      for course in @to_be_removed
+         @remove_ids << course.id
+      end
 
 
-    @courses = @courses.where.not(id: [@course_ids, @remove_ids])
+      @courses = @courses.where.not(id: [@course_ids, @remove_ids])
 
-    if @ordered_by
-      @courses = @courses.all(:order => "#{@ordered_by} asc")
+      if @ordered_by
+        @courses = @courses.all(:order => "#{@ordered_by} asc")
+      else
+        @courses
+      end
     else
-      @courses
+      @courses = Course.all
     end
+
   end
 
   # GET /courses/1
@@ -69,18 +73,24 @@ class CoursesController < ApplicationController
   end
 
   def send_to_index
-    @courses = Course.find(params[:course_taken_ids])
-    @add_to_user = Array.new
-    for course in @courses
-       @add_to_user << course.id
+    if params[:course_taken_ids] != nil
+      @courses = Course.find(params[:course_taken_ids])
+      @add_to_user = Array.new
+      for course in @courses
+         @add_to_user << course.id
+      end
+
+      @user = current_user
+      @user.courses_taken = @add_to_user
+      @user.save!(validate:false)
+
+      flash[:success] = "Success! You're ready to choose your classes for next semester"
+      redirect_to url_for(:controller => 'users', :action => 'show', id: current_user.id)
+    else
+      flash[:success] = "Success! You're ready to choose your classes for next semester"
+      redirect_to url_for(:controller => 'users', :action => 'show', id: current_user.id)
     end
 
-    @user = current_user
-    @user.courses_taken = @add_to_user
-    @user.save!(validate:false)
-
-    flash[:success] = "Success! You're ready to choose your classes for next semester"
-    redirect_to url_for(:controller => 'users', :action => 'show', id: current_user.id)
   end
 
 

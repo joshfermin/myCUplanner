@@ -1,7 +1,12 @@
 <header class="navbar navbar-fixed-top">
   <div class="navbar-inner">
+
     <div class="container">
-      <%= link_to image_tag('myCUplannerLogo.png', size:"150x250"), root_path, id: "logo" %>
+      <% if signed_in? %>
+        <%= link_to image_tag('myCUplannerLogo.png', size:"150x250", id: "logo"), controller: "users", action: "show", id: current_user.id %>
+      <% else %>
+        <%= link_to image_tag('myCUplannerLogo.png', size:"150x250", id: "logo"), root_path %>
+      <% end %>
       <nav>
         <ul class="nav pull-right">
 

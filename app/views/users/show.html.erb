@@ -12,6 +12,9 @@
         </section>
         </div>
 
+    <% if @courses_taken == nil %>
+
+    <% else %>
     <div class = "container marketing">
     <h3>Courses Taken</h3>
         <table class = "table table-striped">
@@ -40,8 +43,40 @@
         </table>
     <br>
     </div>
+    <% end %>
 
+    <% if @course_event_ids.empty? %>
 
+    <% else %>
+        <div class = "container marketing">
+          <h3>Next Semester Plan</h3>
+          <table class = "table table-striped">
+            <thead>
+            <tr>
+              <th>Subject Area</th>
+              <th>Course Number</th>
+              <th>Course Title</th>
+              <th></th>
+            </tr>
+            </thead>
+
+            <tbody>
+
+            <% @courses_for_next_semester.each do |course| %>
+                <tr>
+                  <td><%= course.subject_area %></td>
+                  <td><%= course.course_number %></td>
+                  <td><%= course.course_title %></td>
+                  <td><%= link_to 'Show', course %></td>
+                  <!--<td><#%= link_to 'Edit', edit_course_path(course) %></td>-->
+                  <!--<td><#%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+                </tr>
+            <% end %>
+            </tbody>
+          </table>
+          <br>
+        </div>
+    <% end %>
 
     <div class="hero-unit">
     <div class="container marketing">
@@ -62,83 +97,6 @@
       </div><!-- /.row -->
     </div>
     </div>
-<% else %>
-    <!-- Carousel
-    ================================================== -->
-    <div id="myCarousel" class="carousel slide">
-      <div class="carousel-inner">
-        <div class="item active">
-          <img>
-          <%= link_to image_tag("slide-01.jpg"), root_path %>
-          </img>
-          <div class="center container">
-            <div class="carousel-caption">
-              <h1 style=color:white>Welcome Back</h1>
-              <p class="lead" style=color:#D0D0D0>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p></p>
-              <a class="btn btn-xs btn-default" href="#">Sign up today</a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img>
-          <%= link_to image_tag("slide-02.jpg"), root_path %>
-          </img>
-          <div class="center container">
-            <div class="carousel-caption">
-              <h1 style=color:white>Example headline</h1>
-              <p class="lead" style=color:#D0D0D0  >Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p></p>
-              <a class="btn btn-xs btn-default" href="#">Sign up today</a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img>
-          <%= link_to image_tag("slide-03.jpg"), root_path %>
-          </img>
-          <div class="center container">
-            <div class="carousel-caption">
-              <h1 style=color:white>Example headline</h1>
-              <p class="lead" style=color:#D0D0D0  >Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p></p>
-              <a class="btn btn-xs btn-default" href="#">Sign up today</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-    </div><!-- /.carousel -->
 
-
-    <!-- Marketing messaging and featurettes
-   ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-
-    <div class="container marketing">
-
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="span4">
-          <%=link_to image_tag("calendar.png"), '/calendar'  %>
-          <h2>Calendar</h2>
-          <p>Ready to start planning your next steps for next semester? Click here to go to the calendar.</p>
-          <p><a class="btn" href="/calendar">View details &raquo;</a></p>
-        </div><!-- /.span4 -->
-        <div class="span4">
-          <%=link_to image_tag("classroom.png"), '/courses' %>
-          <h2>Courses</h2>
-          <p>Want to see the computer science courses offered next semester? Go here to find more details.</p>
-          <p><a class="btn" href="courses">View details &raquo;</a></p>
-        </div><!-- /.span4 -->
-        <div class="span4">
-          <%=link_to image_tag("schedule.jpg", class: "img-circle"), '/events'  %>
-          <h2>Schedule</h2>
-          <p>Done editing your calendar? Come here to see an overview of your current schedule and upcoming events.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div><!-- /.span4 -->
-      </div><!-- /.row -->
-    </div>
 
 <% end %>
