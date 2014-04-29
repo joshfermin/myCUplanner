@@ -26,7 +26,9 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @courses = @user.courses.paginate(page: params[:page])
+    @course_ids = @user.courses_taken
+
+    @courses = Course.find(@course_ids)
   end
 
   private

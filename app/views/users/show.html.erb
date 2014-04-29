@@ -1,20 +1,7 @@
 <% if signed_in? %>
     <% provide(:title, @user.name) %>
-      <div class="row">
-        <div class="span8">
-          <% if @user.courses.any? %>
-            <h3>Courses (<%= @user.courses.count %>)</h3>
-            <ol class="courses">
-              <%= render @courses %>
-            </ol>
-            <%= will_paginate @courses %>
-          <% end %>
-        </div>
-      </div>
 
-
-    <div class="row">
-        <div class="hero-unit">
+        <div class="center hero-unit">
         <section>
           <h3>
             <%= @user.name %>
@@ -24,8 +11,35 @@
           <p></p>
         </section>
         </div>
+
+    <div class = "container marketing">
+    <h3><%=@user.name%>'s Courses Taken</h3>
+        <table class = "table table-striped">
+          <thead>
+          <tr>
+            <th>Subject Area</th>
+            <th>Course Number</th>
+            <th>Course Title</th>
+          </tr>
+          </thead>
+
+          <tbody>
+
+          <% @courses.each do |course| %>
+              <tr>
+                <td><%= course.subject_area %></td>
+                <td><%= course.course_number %></td>
+                <td><%= course.course_title %></td>
+                <!--<td><#%= link_to 'Edit', edit_course_path(course) %></td>-->
+                <!--<td><#%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+              </tr>
+          <% end %>
+          </tbody>
+        </table>
+    <br>
     </div>
 
+    <div class="hero-unit">
     <div class="container marketing">
 
       <!-- Three columns of text below the carousel -->
@@ -33,22 +47,16 @@
         <div class="span4">
           <%=link_to image_tag("calendar.png"), '/calendar'  %>
           <h2>Calendar</h2>
-          <p>Ready to start planning your next steps for next semester? Click here to go to the calendar.</p>
-          <p><a class="btn" href="/calendar">View details &raquo;</a></p>
         </div><!-- /.span4 -->
         <div class="span4">
           <%=link_to image_tag("classroom.png"), '/courses' %>
           <h2>Courses</h2>
-          <p>Want to see the computer science courses offered next semester? Go here to find more details.</p>
-          <p><a class="btn" href="courses">View details &raquo;</a></p>
         </div><!-- /.span4 -->
         <div class="span4">
           <%=link_to image_tag("schedule.jpg", class: "img-circle"), '/events'  %>
           <h2>Schedule</h2>
-          <p>Done editing your calendar? Come here to see an overview of your current schedule and upcoming events.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
         </div><!-- /.span4 -->
       </div><!-- /.row -->
     </div>
-
+    </div>
 <% end %>

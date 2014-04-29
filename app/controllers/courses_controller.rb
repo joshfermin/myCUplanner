@@ -48,7 +48,7 @@ class CoursesController < ApplicationController
     @user.courses_taken = @add_to_user
     @user.save!(validate:false)
 
-
+    flash[:success] = "Success! You're ready to choose your classes for next semester"
     redirect_to url_for(:controller => 'users', :action => 'show', id: current_user.id)
   end
 
