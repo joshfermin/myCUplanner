@@ -18,6 +18,7 @@ class UsersController < ApplicationController
       sign_in @user
       flash[:success] = "Welcome to myCUplanner" # flash notice that tells the user that the sign up was successful
       redirect_to @user
+      # redirect_to '/courses/select_courses_taken'
     else
       render 'new'
     end

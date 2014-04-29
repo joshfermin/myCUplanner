@@ -20,6 +20,7 @@ MyCUplanner::Application.routes.draw do
       put 'update_multiple'
       post 'delete_multiple'
       post 'send_to_calendar'
+      post 'send_to_courses'
     end
   end
 

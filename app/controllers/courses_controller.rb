@@ -28,6 +28,10 @@ class CoursesController < ApplicationController
     @courses = Course.find(params[:course_ids])
   end
 
+  def send_to_courses
+    redirect_to url_for(:controller => 'courses', :action => 'index')
+  end
+
   def send_to_calendar
 
     @courses = Course.find(params[:course_ids])
@@ -146,7 +150,7 @@ class CoursesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_course
-      @course = Course.find(params[:id])
+      @course = Course.all
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
