@@ -29,11 +29,21 @@ class UsersController < ApplicationController
       @user = current_user
       @course_ids = @user.courses_taken
       @courses_taken = Course.find(@course_ids)
+
+      @user_events = Event.where(:user_id => @user.id)
+      @course_ids = Array.new
+      for events in @user_events
+         @course_ids << events.course_id
+      end
+
+      @course_ids.compact!.uniq!
+      @courses_for_next_semester = Course.find(@course_ids)
     end
   end
 
+
   private
-    def user_params
+  def user_params
     params.require(:user).permit(:name, :email, :password,
                                  :password_confirmation, :courses_taken)
   end

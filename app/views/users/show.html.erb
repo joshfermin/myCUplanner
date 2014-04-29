@@ -13,13 +13,14 @@
         </div>
 
     <div class = "container marketing">
-    <h3><%=@user.name%>'s Courses Taken</h3>
+    <h3>Courses Taken</h3>
         <table class = "table table-striped">
           <thead>
           <tr>
             <th>Subject Area</th>
             <th>Course Number</th>
             <th>Course Title</th>
+            <th></th>
           </tr>
           </thead>
 
@@ -30,6 +31,7 @@
                 <td><%= course.subject_area %></td>
                 <td><%= course.course_number %></td>
                 <td><%= course.course_title %></td>
+                <td><%= link_to 'Show', course %></td>
                 <!--<td><#%= link_to 'Edit', edit_course_path(course) %></td>-->
                 <!--<td><#%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
               </tr>
@@ -37,6 +39,35 @@
           </tbody>
         </table>
     <br>
+    </div>
+
+    <div class = "container marketing">
+      <h3>Next Semester Plan</h3>
+      <table class = "table table-striped">
+        <thead>
+        <tr>
+          <th>Subject Area</th>
+          <th>Course Number</th>
+          <th>Course Title</th>
+          <th></th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        <% @courses_for_next_semester.each do |course| %>
+            <tr>
+              <td><%= course.subject_area %></td>
+              <td><%= course.course_number %></td>
+              <td><%= course.course_title %></td>
+              <td><%= link_to 'Show', course %></td>
+              <!--<td><#%= link_to 'Edit', edit_course_path(course) %></td>-->
+              <!--<td><#%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+      <br>
     </div>
 
     <div class="hero-unit">

@@ -94,8 +94,11 @@ class CoursesController < ApplicationController
     @instructor = Array.new
     @building = Array.new
     @room_number = Array.new
+    @course_id = Array.new
 
     for course in @courses do
+      @course_id << course.id
+
       if course.course_title != nil
         @title << course.course_title
       else
@@ -166,51 +169,51 @@ class CoursesController < ApplicationController
       Chronic.time_class = Time.zone
 
       if @day[count] == "M" #or 'T' or 'TH' or 'W' or 'F'
-        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_m, :ends_at => @replace_end_m, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count])
+        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_m, :ends_at => @replace_end_m, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count], :course_id => @course_id[count])
         @event.save
 
       elsif @day[count] == "T"
-        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_t, :ends_at => @replace_end_t, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count])
+        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_t, :ends_at => @replace_end_t, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count], :course_id => @course_id[count])
         @event.save
 
       elsif @day[count] == "TH"
-        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_th, :ends_at => @replace_end_th, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count])
+        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_th, :ends_at => @replace_end_th, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count], :course_id => @course_id[count])
         @event.save
 
       elsif @day[count] == "W"
-        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_w, :ends_at => @replace_end_w, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count])
+        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_w, :ends_at => @replace_end_w, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count], :course_id => @course_id[count])
         @event.save
 
       elsif @day[count] == "F"
-        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_f, :ends_at => @replace_end_f, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count])
+        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_f, :ends_at => @replace_end_f, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count], :course_id => @course_id[count])
         @event.save
 
       elsif @day[count] == "M/W/F"
-        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_m, :ends_at => @replace_end_m, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count])
+        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_m, :ends_at => @replace_end_m, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count], :course_id => @course_id[count])
         @event.save
-        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_w, :ends_at => @replace_end_w, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count])
+        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_w, :ends_at => @replace_end_w, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count], :course_id => @course_id[count])
         @event.save
-        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_f, :ends_at => @replace_end_f, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count])
+        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_f, :ends_at => @replace_end_f, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count], :course_id => @course_id[count])
         @event.save
 
       elsif @day[count] == "M/W"
-        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_m, :ends_at => @replace_end_m, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count])
+        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_m, :ends_at => @replace_end_m, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count], :course_id => @course_id[count])
         @event.save
-        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_w, :ends_at => @replace_end_w, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count])
+        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_w, :ends_at => @replace_end_w, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count], :course_id => @course_id[count])
         @event.save
 
       elsif @day[count] == "T/TH"
-        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_t, :ends_at => @replace_end_t, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count])
+        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_t, :ends_at => @replace_end_t, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count], :course_id => @course_id[count])
         @event.save
-        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_th, :ends_at => @replace_end_th, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count])
+        @event = current_user.events.build(:title => @title[count], :starts_at => @replace_start_th, :ends_at => @replace_end_th, :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count], :course_id => @course_id[count])
         @event.save
 
       else
-        @event = current_user.events.build(:title => @title[count], :starts_at => @start_time[count], :ends_at => @end_time[count], :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count])
+        @event = current_user.events.build(:title => @title[count], :starts_at => @start_time[count], :ends_at => @end_time[count], :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count], :course_id => @course_id[count])
         @event.save
       end
 
-      #@event = current_user.events.build(:title => @title[count], :starts_at => @start_time[count], :ends_at => @end_time[count], :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count])
+      #@event = current_user.events.build(:title => @title[count], :starts_at => @start_time[count], :ends_at => @end_time[count], :all_day => false, :description => "Instructor: " + @instructor[count] + "\n Building: " + @building[count] + "\n Room: " + @room_number[count] + "\n Days: " + @day[count], :course_id => @course_id[count])
       #@event.save
     end
 
