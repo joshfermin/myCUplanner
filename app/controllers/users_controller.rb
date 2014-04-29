@@ -25,11 +25,11 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
-    @course_ids = @user.courses_taken
-    @courses_taken = Course.find(@course_ids)
-
-
+    if signed_in?
+      @user = current_user
+      @course_ids = @user.courses_taken
+      @courses_taken = Course.find(@course_ids)
+    end
   end
 
   private
