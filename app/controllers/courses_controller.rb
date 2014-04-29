@@ -8,15 +8,29 @@ class CoursesController < ApplicationController
     @course_ids = @user.courses_taken
 
     @courses = Course.all
-
-
     @courses_taken = Course.find(@course_ids)
     @ordered_by = params[:order_by] if params.has_key? 'order_by'
+
+    @course_taken_numbers = Array.new
+    for course in @courses_taken
+      @course_taken_numbers << course.course_number
+    end
+
+    @courses = @courses.where.not(id: @course_ids)
+    @to_be_removed = @courses.where(:course_number => @course_taken_numbers)
+    @remove_ids = Array.new
+
+    for course in @to_be_removed
+       @remove_ids << course.id
+    end
+
+
+    @courses = @courses.where.not(id: [@course_ids, @remove_ids])
+
     if @ordered_by
-      @courses = @courses.where.not(id: @course_ids)
       @courses = @courses.all(:order => "#{@ordered_by} asc")
     else
-      @courses = @courses.where.not(id: @course_ids)
+      @courses
     end
   end
 
@@ -37,11 +51,20 @@ class CoursesController < ApplicationController
   end
 
   def select_courses_taken
+    @hide_ids = Array.new
+    @courses = Course.all
     @ordered_by = params[:order_by] if params.has_key? 'order_by'
+    @to_be_hidden = @courses.where(:course_title => ["REC","Lab"])
+
+    for course in @to_be_hidden
+      @hide_ids << course.id
+    end
+
     if @ordered_by
+      @courses = @courses.where.not(id: @hide_ids)
       @courses = Course.all(:order => "#{@ordered_by} asc")
     else
-      @courses = Course.all
+      @courses = @courses.where.not(id: @hide_ids)
     end
   end
 
