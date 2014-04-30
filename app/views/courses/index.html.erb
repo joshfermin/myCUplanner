@@ -45,8 +45,24 @@
       <% end %>
     </tbody>
   </table>
-  <%= submit_tag "Review Checked", class: "center btn btn-large btn-primary" %>
+  <%= submit_tag "Review Checked", class: "btn btn-large btn-primary" %>
 <% end %> 
 <br>
 
 <%= link_to 'New Course', new_course_path %>
+
+<!-- jQuery library -->
+
+<script type="text/javascript">
+    $(function() {
+        $(window).scroll(function() {
+            if($(this).scrollTop() != 0) {
+                $('#backtotop').fadeIn();
+            }
+        });
+
+        $('#backtotop').click(function() {
+            $('body,html').animate({scrollTop:0},800);
+        });
+    });
+</script>

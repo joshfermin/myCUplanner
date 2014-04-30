@@ -129,7 +129,6 @@ class CoursesController < ApplicationController
 
       if course.day != nil
         @day << course.day
-        debugger
       end
 
       if course.instructor != nil
