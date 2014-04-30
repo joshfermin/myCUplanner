@@ -7,7 +7,11 @@ class CoursesController < ApplicationController
     @user = current_user
     @course_ids = @user.courses_taken
     @courses = Course.all
+
+
+    #  hiding courses taken
     if @course_ids != nil
+      ##############
       @courses_taken = Course.find(@course_ids)
       @ordered_by = params[:order_by] if params.has_key? 'order_by'
 
@@ -15,7 +19,7 @@ class CoursesController < ApplicationController
       for course in @courses_taken
         @course_taken_numbers << course.course_number
       end
-
+      # removing recitations and labs
       @courses = @courses.where.not(id: @course_ids)
       @to_be_removed = @courses.where(:course_number => @course_taken_numbers)
       @remove_ids = Array.new
@@ -23,10 +27,41 @@ class CoursesController < ApplicationController
       for course in @to_be_removed
          @remove_ids << course.id
       end
+      ##############
 
+      # hiding courses planning on taking #
+      @user_events = Event.where(:user_id => @user.id)
+      @course_event_ids = Array.new
+      for events in @user_events
+        @course_event_ids << events.course_id
+      end
 
-      @courses = @courses.where.not(id: [@course_ids, @remove_ids])
+      if @course_event_ids.empty? or @course_event_ids == nil
 
+      else
+        @course_event_ids = @course_event_ids.compact
+        @course_event_ids = @course_event_ids.uniq
+      end
+
+      # removing recitations and labs
+      @course_plan = Course.find(@course_event_ids)
+      @course_plan_numbers = Array.new
+      for course in @course_plan
+        @course_plan_numbers << course.course_number
+      end
+      @to_remove = @courses.where(:course_number => @course_plan_numbers)
+      @remove_plan_ids = Array.new
+
+      for course in @to_remove
+        @remove_plan_ids << course.id
+      end
+
+      ###############
+
+      # hiding courses
+      @courses = @courses.where.not(id: [@course_ids, @remove_ids, @remove_plan_ids])
+
+      # for ordering
       if @ordered_by
         @courses = @courses.all(:order => "#{@ordered_by} asc")
       else

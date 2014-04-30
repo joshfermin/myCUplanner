@@ -30,7 +30,6 @@ class UsersController < ApplicationController
       @course_ids = @user.courses_taken
 
       if @course_ids == nil
-        #@courses_taken = nil
         # implement something here for freshman who havent had classes yet
       else
         @courses_taken = Course.find(@course_ids)

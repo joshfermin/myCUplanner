@@ -1,7 +1,5 @@
 <% if signed_in? %>
-    <% provide(:title, @user.name) %>
-
-        <div class="center hero-unit">
+    <div class="center hero-unit">
         <section>
           <h2>
             <%= @user.name %>
@@ -10,7 +8,7 @@
           <p>Email: <%= @user.email %></p>
           <p></p>
         </section>
-        </div>
+    </div>
 
     <% if @courses_taken == nil %>
 
@@ -46,7 +44,8 @@
     <% end %>
 
     <% if @course_event_ids.empty? %>
-
+        <h3>Add courses for next semester!</h3>
+        <p>Click the course app below, or navigate to the course-add from the navbar.</p>
     <% else %>
         <div class = "container marketing">
           <h3>Next Semester Plan</h3>
