@@ -12,6 +12,11 @@ A web application that will be deployed to heroku to help computer science stude
 Is currently deployed by heroku at: https://mycuplanner.herokuapp.com/ 
 Note: The app deployed on heroku may not be the same as the source code seen here (i.e. it was not pushed recently to heroku).
 
+### Screenshots:
+------
+## Sign Up:
+![Alt text](/../ScreenshotsForREADME/app/assets/screenshots/SignUp.png?raw=true)
+
 ### MVC:
 ------
 * Models: 
