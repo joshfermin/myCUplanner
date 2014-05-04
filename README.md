@@ -14,8 +14,20 @@ Note: The app deployed on heroku may not be the same as the source code seen her
 
 ### Screenshots:
 ------
-## Sign Up:
+#### Sign Up Page:
 ![Alt text](/../ScreenshotsForREADME/app/assets/screenshots/SignUp.png?raw=true)
+
+#### Select Courses Taken:
+![Alt text](/../ScreenshotsForREADME/app/assets/screenshots/SelectCoursesTaken.png?raw=true)
+
+#### Selecting Courses for next semester:
+![Alt text](/../ScreenshotsForREADME/app/assets/screenshots/CoursesForNextSem.png?raw=true)
+
+#### Sending those courses to Calendar:
+![Alt text](/../ScreenshotsForREADME/app/assets/screenshots/SendToCalendar.png?raw=true)
+
+#### Calendar View
+![Alt text](/../ScreenshotsForREADME/app/assets/screenshots/CalendarView.png?raw=true)
 
 ### MVC:
 ------
