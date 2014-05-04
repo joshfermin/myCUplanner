@@ -19,15 +19,24 @@ Note: The app deployed on heroku may not be the same as the source code seen her
 
 #### Select Courses Taken:
 ![Alt text](/../ScreenshotsForREADME/app/assets/screenshots/SelectCoursesTaken.png?raw=true)
+After you sign up for the website, you are immediately brought here to choose the courses you have taken.
 
 #### Selecting Courses for next semester:
 ![Alt text](/../ScreenshotsForREADME/app/assets/screenshots/CoursesForNextSem.png?raw=true)
+After you have checked out the courses you have taken, you can then choose courses for next semester which will be based upon the courses you have previously taken.
 
 #### Sending those courses to Calendar:
 ![Alt text](/../ScreenshotsForREADME/app/assets/screenshots/SendToCalendar.png?raw=true)
+When you're done with that, you have a review stage before sending these courses to calendar. 
 
 #### Calendar View
 ![Alt text](/../ScreenshotsForREADME/app/assets/screenshots/CalendarView.png?raw=true)
+After you've sent the courses to the calendar, you can then view them on the calendar view, neatly laid out in a weekly fashion (or monthly/daily).
+
+#### Profile View
+![Alt text](/../ScreenshotsForREADME/app/assets/screenshots/Profile.png?raw=true)
+And when all is said and done, you can go to your profile for a general overview of your courses.
+![Alt text](/../ScreenshotsForREADME/app/assets/screenshots/Profile2.png?raw=true)
 
 ### MVC:
 ------
