@@ -36,7 +36,10 @@ After you've sent the courses to the calendar, you can then view them on the cal
 #### Profile View
 ![Alt text](/../ScreenshotsForREADME/app/assets/screenshots/Profile.png?raw=true)
 And when all is said and done, you can go to your profile for a general overview of your courses.
+
 ![Alt text](/../ScreenshotsForREADME/app/assets/screenshots/Profile2.png?raw=true)
+Here is another photo of the profile with the next semester plan added onto it.
+
 
 ### MVC:
 ------
