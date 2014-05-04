@@ -1,4 +1,4 @@
-# myCUplanner
+![Alt text](/app/assets/images/myCUplannerLogo.png?raw=true)
 
 ### Project Info:
 ------
